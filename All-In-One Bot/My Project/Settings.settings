@@ -1,0 +1,423 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="Version" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Version 1.0.0.0</Value>
+    </Setting>
+    <Setting Name="Copyright" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Copyright © 2016 Affordable All-In-One Bot. All Rights Reserved.</Value>
+    </Setting>
+    <Setting Name="Proxy" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Enter ONE PROXY PER LINE with the following format:
+
+IP:Port
+OR
+IP:Port:User:Pass
+
+Double left-click on this box to clear.</Value>
+    </Setting>
+    <Setting Name="Country" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;United States&lt;/string&gt;
+  &lt;string&gt;Åland Islands&lt;/string&gt;
+  &lt;string&gt;Afghanistan&lt;/string&gt;
+  &lt;string&gt;Albania&lt;/string&gt;
+  &lt;string&gt;Algeria&lt;/string&gt;
+  &lt;string&gt;American Samoa&lt;/string&gt;
+  &lt;string&gt;Andorra&lt;/string&gt;
+  &lt;string&gt;Angola&lt;/string&gt;
+  &lt;string&gt;Anguilla&lt;/string&gt;
+  &lt;string&gt;Antarctica&lt;/string&gt;
+  &lt;string&gt;Antigua and Barbuda&lt;/string&gt;
+  &lt;string&gt;Argentina&lt;/string&gt;
+  &lt;string&gt;Armenia&lt;/string&gt;
+  &lt;string&gt;Aruba&lt;/string&gt;
+  &lt;string&gt;Australia&lt;/string&gt;
+  &lt;string&gt;Austria&lt;/string&gt;
+  &lt;string&gt;Azerbaijan&lt;/string&gt;
+  &lt;string&gt;Bahamas&lt;/string&gt;
+  &lt;string&gt;Bahrain&lt;/string&gt;
+  &lt;string&gt;Bangladesh&lt;/string&gt;
+  &lt;string&gt;Barbados&lt;/string&gt;
+  &lt;string&gt;Belarus&lt;/string&gt;
+  &lt;string&gt;Belgium&lt;/string&gt;
+  &lt;string&gt;Belize&lt;/string&gt;
+  &lt;string&gt;Benin&lt;/string&gt;
+  &lt;string&gt;Bermuda&lt;/string&gt;
+  &lt;string&gt;Bhutan&lt;/string&gt;
+  &lt;string&gt;Bolivia&lt;/string&gt;
+  &lt;string&gt;Bonaire, Sint Eustatius and Saba&lt;/string&gt;
+  &lt;string&gt;Bosnia and Herzegovina&lt;/string&gt;
+  &lt;string&gt;Botswana&lt;/string&gt;
+  &lt;string&gt;Bouvet Island&lt;/string&gt;
+  &lt;string&gt;Brazil&lt;/string&gt;
+  &lt;string&gt;British Indian Ocean Territory&lt;/string&gt;
+  &lt;string&gt;British Virgin Islands&lt;/string&gt;
+  &lt;string&gt;Brunei&lt;/string&gt;
+  &lt;string&gt;Bulgaria&lt;/string&gt;
+  &lt;string&gt;Burkina Faso&lt;/string&gt;
+  &lt;string&gt;Burundi&lt;/string&gt;
+  &lt;string&gt;Côte d'Ivoire&lt;/string&gt;
+  &lt;string&gt;Cambodia&lt;/string&gt;
+  &lt;string&gt;Cameroon&lt;/string&gt;
+  &lt;string&gt;Canada&lt;/string&gt;
+  &lt;string&gt;Cape Verde&lt;/string&gt;
+  &lt;string&gt;Cayman Islands&lt;/string&gt;
+  &lt;string&gt;Central African Republic&lt;/string&gt;
+  &lt;string&gt;Chad&lt;/string&gt;
+  &lt;string&gt;Chile&lt;/string&gt;
+  &lt;string&gt;China&lt;/string&gt;
+  &lt;string&gt;Christmas Island&lt;/string&gt;
+  &lt;string&gt;Cocos Islands&lt;/string&gt;
+  &lt;string&gt;Colombia&lt;/string&gt;
+  &lt;string&gt;Comoros&lt;/string&gt;
+  &lt;string&gt;Congo&lt;/string&gt;
+  &lt;string&gt;Cook Islands&lt;/string&gt;
+  &lt;string&gt;Costa Rica&lt;/string&gt;
+  &lt;string&gt;Croatia&lt;/string&gt;
+  &lt;string&gt;Cuba&lt;/string&gt;
+  &lt;string&gt;Curaçao&lt;/string&gt;
+  &lt;string&gt;Cyprus&lt;/string&gt;
+  &lt;string&gt;Czech Republic&lt;/string&gt;
+  &lt;string&gt;Denmark&lt;/string&gt;
+  &lt;string&gt;Djibouti&lt;/string&gt;
+  &lt;string&gt;Dominica&lt;/string&gt;
+  &lt;string&gt;Dominican Republic&lt;/string&gt;
+  &lt;string&gt;Ecuador&lt;/string&gt;
+  &lt;string&gt;Egypt&lt;/string&gt;
+  &lt;string&gt;El Salvador&lt;/string&gt;
+  &lt;string&gt;Equatorial Guinea&lt;/string&gt;
+  &lt;string&gt;Eritrea&lt;/string&gt;
+  &lt;string&gt;Estonia&lt;/string&gt;
+  &lt;string&gt;Ethiopia&lt;/string&gt;
+  &lt;string&gt;Falkland Islands&lt;/string&gt;
+  &lt;string&gt;Faroe Islands&lt;/string&gt;
+  &lt;string&gt;Fiji&lt;/string&gt;
+  &lt;string&gt;Finland&lt;/string&gt;
+  &lt;string&gt;France&lt;/string&gt;
+  &lt;string&gt;French Guiana&lt;/string&gt;
+  &lt;string&gt;French Polynesia&lt;/string&gt;
+  &lt;string&gt;French Southern Territories&lt;/string&gt;
+  &lt;string&gt;Gabon&lt;/string&gt;
+  &lt;string&gt;Gambia&lt;/string&gt;
+  &lt;string&gt;Georgia&lt;/string&gt;
+  &lt;string&gt;Germany&lt;/string&gt;
+  &lt;string&gt;Ghana&lt;/string&gt;
+  &lt;string&gt;Gibraltar&lt;/string&gt;
+  &lt;string&gt;Greece&lt;/string&gt;
+  &lt;string&gt;Greenland&lt;/string&gt;
+  &lt;string&gt;Grenada&lt;/string&gt;
+  &lt;string&gt;Guadeloupe&lt;/string&gt;
+  &lt;string&gt;Guam&lt;/string&gt;
+  &lt;string&gt;Guatemala&lt;/string&gt;
+  &lt;string&gt;Guernsey&lt;/string&gt;
+  &lt;string&gt;Guinea&lt;/string&gt;
+  &lt;string&gt;Guinea-Bissau&lt;/string&gt;
+  &lt;string&gt;Guyana&lt;/string&gt;
+  &lt;string&gt;Haiti&lt;/string&gt;
+  &lt;string&gt;Heard Island And McDonald Islands&lt;/string&gt;
+  &lt;string&gt;Honduras&lt;/string&gt;
+  &lt;string&gt;Hong Kong&lt;/string&gt;
+  &lt;string&gt;Hungary&lt;/string&gt;
+  &lt;string&gt;Iceland&lt;/string&gt;
+  &lt;string&gt;India&lt;/string&gt;
+  &lt;string&gt;Indonesia&lt;/string&gt;
+  &lt;string&gt;Iran&lt;/string&gt;
+  &lt;string&gt;Iraq&lt;/string&gt;
+  &lt;string&gt;Ireland&lt;/string&gt;
+  &lt;string&gt;Isle Of Man&lt;/string&gt;
+  &lt;string&gt;Israel&lt;/string&gt;
+  &lt;string&gt;Italy&lt;/string&gt;
+  &lt;string&gt;Jamaica&lt;/string&gt;
+  &lt;string&gt;Japan&lt;/string&gt;
+  &lt;string&gt;Jersey&lt;/string&gt;
+  &lt;string&gt;Jordan&lt;/string&gt;
+  &lt;string&gt;Kazakhstan&lt;/string&gt;
+  &lt;string&gt;Kenya&lt;/string&gt;
+  &lt;string&gt;Kiribati&lt;/string&gt;
+  &lt;string&gt;Kuwait&lt;/string&gt;
+  &lt;string&gt;Kyrgyzstan&lt;/string&gt;
+  &lt;string&gt;Laos&lt;/string&gt;
+  &lt;string&gt;Latvia&lt;/string&gt;
+  &lt;string&gt;Lebanon&lt;/string&gt;
+  &lt;string&gt;Lesotho&lt;/string&gt;
+  &lt;string&gt;Liberia&lt;/string&gt;
+  &lt;string&gt;Libya&lt;/string&gt;
+  &lt;string&gt;Liechtenstein&lt;/string&gt;
+  &lt;string&gt;Lithuania&lt;/string&gt;
+  &lt;string&gt;Luxembourg&lt;/string&gt;
+  &lt;string&gt;Macao&lt;/string&gt;
+  &lt;string&gt;Macedonia&lt;/string&gt;
+  &lt;string&gt;Madagascar&lt;/string&gt;
+  &lt;string&gt;Malawi&lt;/string&gt;
+  &lt;string&gt;Malaysia&lt;/string&gt;
+  &lt;string&gt;Maldives&lt;/string&gt;
+  &lt;string&gt;Mali&lt;/string&gt;
+  &lt;string&gt;Malta&lt;/string&gt;
+  &lt;string&gt;Marshall Islands&lt;/string&gt;
+  &lt;string&gt;Martinique&lt;/string&gt;
+  &lt;string&gt;Mauritania&lt;/string&gt;
+  &lt;string&gt;Mauritius&lt;/string&gt;
+  &lt;string&gt;Mayotte&lt;/string&gt;
+  &lt;string&gt;Mexico&lt;/string&gt;
+  &lt;string&gt;Micronesia&lt;/string&gt;
+  &lt;string&gt;Moldova&lt;/string&gt;
+  &lt;string&gt;Monaco&lt;/string&gt;
+  &lt;string&gt;Mongolia&lt;/string&gt;
+  &lt;string&gt;Montenegro&lt;/string&gt;
+  &lt;string&gt;Montserrat&lt;/string&gt;
+  &lt;string&gt;Morocco&lt;/string&gt;
+  &lt;string&gt;Mozambique&lt;/string&gt;
+  &lt;string&gt;Myanmar&lt;/string&gt;
+  &lt;string&gt;Namibia&lt;/string&gt;
+  &lt;string&gt;Nauru&lt;/string&gt;
+  &lt;string&gt;Nepal&lt;/string&gt;
+  &lt;string&gt;Netherlands&lt;/string&gt;
+  &lt;string&gt;Netherlands Antilles&lt;/string&gt;
+  &lt;string&gt;New Caledonia&lt;/string&gt;
+  &lt;string&gt;New Zealand&lt;/string&gt;
+  &lt;string&gt;Nicaragua&lt;/string&gt;
+  &lt;string&gt;Niger&lt;/string&gt;
+  &lt;string&gt;Nigeria&lt;/string&gt;
+  &lt;string&gt;Niue&lt;/string&gt;
+  &lt;string&gt;Norfolk Island&lt;/string&gt;
+  &lt;string&gt;North Korea&lt;/string&gt;
+  &lt;string&gt;Northern Mariana Islands&lt;/string&gt;
+  &lt;string&gt;Norway&lt;/string&gt;
+  &lt;string&gt;Oman&lt;/string&gt;
+  &lt;string&gt;Pakistan&lt;/string&gt;
+  &lt;string&gt;Palau&lt;/string&gt;
+  &lt;string&gt;Palestine&lt;/string&gt;
+  &lt;string&gt;Panama&lt;/string&gt;
+  &lt;string&gt;Papua New Guinea&lt;/string&gt;
+  &lt;string&gt;Paraguay&lt;/string&gt;
+  &lt;string&gt;Peru&lt;/string&gt;
+  &lt;string&gt;Philippines&lt;/string&gt;
+  &lt;string&gt;Pitcairn&lt;/string&gt;
+  &lt;string&gt;Poland&lt;/string&gt;
+  &lt;string&gt;Portugal&lt;/string&gt;
+  &lt;string&gt;Puerto Rico&lt;/string&gt;
+  &lt;string&gt;Qatar&lt;/string&gt;
+  &lt;string&gt;Reunion&lt;/string&gt;
+  &lt;string&gt;Romania&lt;/string&gt;
+  &lt;string&gt;Russia&lt;/string&gt;
+  &lt;string&gt;Rwanda&lt;/string&gt;
+  &lt;string&gt;Saint Barthélemy&lt;/string&gt;
+  &lt;string&gt;Saint Helena&lt;/string&gt;
+  &lt;string&gt;Saint Kitts And Nevis&lt;/string&gt;
+  &lt;string&gt;Saint Lucia&lt;/string&gt;
+  &lt;string&gt;Saint Martin&lt;/string&gt;
+  &lt;string&gt;Saint Pierre And Miquelon&lt;/string&gt;
+  &lt;string&gt;Saint Vincent And The Grenadines&lt;/string&gt;
+  &lt;string&gt;Samoa&lt;/string&gt;
+  &lt;string&gt;San Marino&lt;/string&gt;
+  &lt;string&gt;Sao Tome And Principe&lt;/string&gt;
+  &lt;string&gt;Saudi Arabia&lt;/string&gt;
+  &lt;string&gt;Senegal&lt;/string&gt;
+  &lt;string&gt;Serbia&lt;/string&gt;
+  &lt;string&gt;Seychelles&lt;/string&gt;
+  &lt;string&gt;Sierra Leone&lt;/string&gt;
+  &lt;string&gt;Singapore&lt;/string&gt;
+  &lt;string&gt;Sint Maarten (Dutch part)&lt;/string&gt;
+  &lt;string&gt;Slovakia&lt;/string&gt;
+  &lt;string&gt;Slovenia&lt;/string&gt;
+  &lt;string&gt;Solomon Islands&lt;/string&gt;
+  &lt;string&gt;Somalia&lt;/string&gt;
+  &lt;string&gt;South Africa&lt;/string&gt;
+  &lt;string&gt;South Georgia And The South Sandwich Islands&lt;/string&gt;
+  &lt;string&gt;South Korea&lt;/string&gt;
+  &lt;string&gt;South Sudan&lt;/string&gt;
+  &lt;string&gt;Spain&lt;/string&gt;
+  &lt;string&gt;Sri Lanka&lt;/string&gt;
+  &lt;string&gt;Sudan&lt;/string&gt;
+  &lt;string&gt;Suriname&lt;/string&gt;
+  &lt;string&gt;Svalbard And Jan Mayen&lt;/string&gt;
+  &lt;string&gt;Swaziland&lt;/string&gt;
+  &lt;string&gt;Sweden&lt;/string&gt;
+  &lt;string&gt;Switzerland&lt;/string&gt;
+  &lt;string&gt;Syria&lt;/string&gt;
+  &lt;string&gt;Taiwan&lt;/string&gt;
+  &lt;string&gt;Tajikistan&lt;/string&gt;
+  &lt;string&gt;Tanzania&lt;/string&gt;
+  &lt;string&gt;Thailand&lt;/string&gt;
+  &lt;string&gt;The Democratic Republic Of Congo&lt;/string&gt;
+  &lt;string&gt;Timor-Leste&lt;/string&gt;
+  &lt;string&gt;Togo&lt;/string&gt;
+  &lt;string&gt;Tokelau&lt;/string&gt;
+  &lt;string&gt;Tonga&lt;/string&gt;
+  &lt;string&gt;Trinidad and Tobago&lt;/string&gt;
+  &lt;string&gt;Tunisia&lt;/string&gt;
+  &lt;string&gt;Turkey&lt;/string&gt;
+  &lt;string&gt;Turkmenistan&lt;/string&gt;
+  &lt;string&gt;Turks And Caicos Islands&lt;/string&gt;
+  &lt;string&gt;Tuvalu&lt;/string&gt;
+  &lt;string&gt;U.S. Virgin Islands&lt;/string&gt;
+  &lt;string&gt;Uganda&lt;/string&gt;
+  &lt;string&gt;Ukraine&lt;/string&gt;
+  &lt;string&gt;United Arab Emirates&lt;/string&gt;
+  &lt;string&gt;United Kingdom&lt;/string&gt;
+  &lt;string&gt;United States Minor Outlying Islands&lt;/string&gt;
+  &lt;string&gt;Uruguay&lt;/string&gt;
+  &lt;string&gt;Uzbekistan&lt;/string&gt;
+  &lt;string&gt;Vanuatu&lt;/string&gt;
+  &lt;string&gt;Vatican&lt;/string&gt;
+  &lt;string&gt;Venezuela&lt;/string&gt;
+  &lt;string&gt;Vietnam&lt;/string&gt;
+  &lt;string&gt;Wallis And Futuna&lt;/string&gt;
+  &lt;string&gt;Western Sahara&lt;/string&gt;
+  &lt;string&gt;Yemen&lt;/string&gt;
+  &lt;string&gt;Zambia&lt;/string&gt;
+  &lt;string&gt;Zimbabwe&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="USState" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Alaska&lt;/string&gt;
+  &lt;string&gt;Alabama&lt;/string&gt;
+  &lt;string&gt;Arkansas&lt;/string&gt;
+  &lt;string&gt;American Samoa&lt;/string&gt;
+  &lt;string&gt;Arizona&lt;/string&gt;
+  &lt;string&gt;California&lt;/string&gt;
+  &lt;string&gt;Colorado&lt;/string&gt;
+  &lt;string&gt;Connecticut&lt;/string&gt;
+  &lt;string&gt;Dist Of Columbia&lt;/string&gt;
+  &lt;string&gt;Delaware&lt;/string&gt;
+  &lt;string&gt;Florida&lt;/string&gt;
+  &lt;string&gt;Micronesia&lt;/string&gt;
+  &lt;string&gt;Georgia&lt;/string&gt;
+  &lt;string&gt;Guam&lt;/string&gt;
+  &lt;string&gt;Hawaii&lt;/string&gt;
+  &lt;string&gt;Iowa&lt;/string&gt;
+  &lt;string&gt;Idaho&lt;/string&gt;
+  &lt;string&gt;Illinois&lt;/string&gt;
+  &lt;string&gt;Indiana&lt;/string&gt;
+  &lt;string&gt;Kansas&lt;/string&gt;
+  &lt;string&gt;Kentucky&lt;/string&gt;
+  &lt;string&gt;Louisiana&lt;/string&gt;
+  &lt;string&gt;Massachusetts&lt;/string&gt;
+  &lt;string&gt;Maryland&lt;/string&gt;
+  &lt;string&gt;Maine&lt;/string&gt;
+  &lt;string&gt;Marshall Islands&lt;/string&gt;
+  &lt;string&gt;Michigan&lt;/string&gt;
+  &lt;string&gt;Minnesota&lt;/string&gt;
+  &lt;string&gt;Missouri&lt;/string&gt;
+  &lt;string&gt;Northern Mariana Islands&lt;/string&gt;
+  &lt;string&gt;Mississippi&lt;/string&gt;
+  &lt;string&gt;Montana&lt;/string&gt;
+  &lt;string&gt;North Carolina&lt;/string&gt;
+  &lt;string&gt;North Dakota&lt;/string&gt;
+  &lt;string&gt;Nebraska&lt;/string&gt;
+  &lt;string&gt;New Hampshire&lt;/string&gt;
+  &lt;string&gt;New Jersey&lt;/string&gt;
+  &lt;string&gt;New Mexico&lt;/string&gt;
+  &lt;string&gt;Nevada&lt;/string&gt;
+  &lt;string&gt;New York&lt;/string&gt;
+  &lt;string&gt;Ohio&lt;/string&gt;
+  &lt;string&gt;Oklahoma&lt;/string&gt;
+  &lt;string&gt;Oregon&lt;/string&gt;
+  &lt;string&gt;Pennsylvania&lt;/string&gt;
+  &lt;string&gt;Puerto Rico&lt;/string&gt;
+  &lt;string&gt;Palau (Micronesia)&lt;/string&gt;
+  &lt;string&gt;Rhode Island&lt;/string&gt;
+  &lt;string&gt;South Carolina&lt;/string&gt;
+  &lt;string&gt;South Dakota&lt;/string&gt;
+  &lt;string&gt;Tennessee&lt;/string&gt;
+  &lt;string&gt;Texas&lt;/string&gt;
+  &lt;string&gt;US Minor Outlying Islands&lt;/string&gt;
+  &lt;string&gt;Utah&lt;/string&gt;
+  &lt;string&gt;Virginia&lt;/string&gt;
+  &lt;string&gt;Virgin Islands Of The United States&lt;/string&gt;
+  &lt;string&gt;Vermont&lt;/string&gt;
+  &lt;string&gt;Washington&lt;/string&gt;
+  &lt;string&gt;Wisconsin&lt;/string&gt;
+  &lt;string&gt;West Virginia&lt;/string&gt;
+  &lt;string&gt;Wyoming&lt;/string&gt;
+  &lt;string&gt;Armed Forces America&lt;/string&gt;
+  &lt;string&gt;Armed Forces Europe&lt;/string&gt;
+  &lt;string&gt;Armed Forces Pacific&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="CardType" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;American Express&lt;/string&gt;
+  &lt;string&gt;Discover&lt;/string&gt;
+  &lt;string&gt;Mastercard&lt;/string&gt;
+  &lt;string&gt;Visa&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="Month" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;01&lt;/string&gt;
+  &lt;string&gt;02&lt;/string&gt;
+  &lt;string&gt;03&lt;/string&gt;
+  &lt;string&gt;04&lt;/string&gt;
+  &lt;string&gt;05&lt;/string&gt;
+  &lt;string&gt;06&lt;/string&gt;
+  &lt;string&gt;07&lt;/string&gt;
+  &lt;string&gt;08&lt;/string&gt;
+  &lt;string&gt;09&lt;/string&gt;
+  &lt;string&gt;10&lt;/string&gt;
+  &lt;string&gt;11&lt;/string&gt;
+  &lt;string&gt;12&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="Year" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;2016&lt;/string&gt;
+  &lt;string&gt;2017&lt;/string&gt;
+  &lt;string&gt;2018&lt;/string&gt;
+  &lt;string&gt;2019&lt;/string&gt;
+  &lt;string&gt;2020&lt;/string&gt;
+  &lt;string&gt;2021&lt;/string&gt;
+  &lt;string&gt;2022&lt;/string&gt;
+  &lt;string&gt;2023&lt;/string&gt;
+  &lt;string&gt;2024&lt;/string&gt;
+  &lt;string&gt;2025&lt;/string&gt;
+  &lt;string&gt;2026&lt;/string&gt;
+  &lt;string&gt;2027&lt;/string&gt;
+  &lt;string&gt;2028&lt;/string&gt;
+  &lt;string&gt;2029&lt;/string&gt;
+  &lt;string&gt;2030&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="Site" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Supreme&lt;/string&gt;
+  &lt;string&gt;Footlocker&lt;/string&gt;
+  &lt;string&gt;Footaction&lt;/string&gt;
+  &lt;string&gt;Eastbay&lt;/string&gt;
+  &lt;string&gt;Champssports&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="PhoneCarrier" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;AT&amp;amp;T&lt;/string&gt;
+  &lt;string&gt;AllTell&lt;/string&gt;
+  &lt;string&gt;Boost&lt;/string&gt;
+  &lt;string&gt;CellularSouth&lt;/string&gt;
+  &lt;string&gt;CentennialWireless&lt;/string&gt;
+  &lt;string&gt;CincinnatiBell&lt;/string&gt;
+  &lt;string&gt;CricketWireless&lt;/string&gt;
+  &lt;string&gt;MetroPCS&lt;/string&gt;
+  &lt;string&gt;Powertel&lt;/string&gt;
+  &lt;string&gt;Qwest&lt;/string&gt;
+  &lt;string&gt;Rogers&lt;/string&gt;
+  &lt;string&gt;Sprint&lt;/string&gt;
+  &lt;string&gt;Suncom&lt;/string&gt;
+  &lt;string&gt;T-Mobile&lt;/string&gt;
+  &lt;string&gt;Telus&lt;/string&gt;
+  &lt;string&gt;U.S.Cellular&lt;/string&gt;
+  &lt;string&gt;Verizon&lt;/string&gt;
+  &lt;string&gt;VirginMobileUSA&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
