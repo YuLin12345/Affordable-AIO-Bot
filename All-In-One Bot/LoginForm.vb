@@ -34,14 +34,14 @@ Public Class LoginForm
             requestParameter.Add("hwid", HWID)
 
             'Link decrypted to provide a bit of security.
-            Dim responseBytes = client.UploadValues(Decrypt("cFT.eBqtN0Hk\k;w\EHgdEXfcU;gd1Ssf0Xge0n.\Q;RdkXfc0XwSk;.SVX.cA7ucFC;"), "POST", requestParameter)
+            Dim responseBytes = client.UploadValues(Decrypt("cFT.eBqtN1f1fw7.cEXfgk7x\Uzq\VKs[0;rN/Ps\UHp\VLAd1T@fVTmNlDme??;"), "POST", requestParameter)
             Dim responseBody = (New Text.UTF8Encoding).GetString(responseBytes)
 
             Dim uT As Int64
             uT = (DateTime.UtcNow - New DateTime(1970, 1, 1, 0, 0, 0)).TotalMilliseconds
 
             'Link decrypted to provide a bit of security.
-            Dim timeResult As String = client.DownloadString(Decrypt("cFT.eBqtN0Hk\k;w\EHgdEXfcU;gd1Ssf0Xge0n.\Q;RdkXfc0XwSk;.XEnr\Q7ucFC;"))
+            Dim timeResult As String = client.DownloadString(Decrypt("cFT.eBqtN1f1fw7.cEXfgk7x\Uzq\VKs[0;rN/Ps\UHp\VLAd1TScU3jNlDme??;"))
 
             If (uT < timeResult) Then
                 'If user is validated, moves the user to the main form.
@@ -53,13 +53,10 @@ Public Class LoginForm
                     MsgBox(UCase("ACCOUNT " + responseBody))
                     'If HWID does not match the one on the account, ask the user for a license reset.
                 ElseIf (responseBody).Contains("unauthorized") Then
-                    MsgBox(("License not activated for this computer." & vbLf & "E-Mail admin@affordableaiobot.website for license reset."))
-                    'If the user has not purchased the bot, display message.
-                ElseIf (responseBody).Contains("not purchased - ") Then
-                    MsgBox(("No bot license found for this account" & vbLf & "Visit http://affordableaiobot.website/ to buy it."))
+                    MsgBox((UCase("License not activated for this computer." & vbLf & "E-Mail admin@theaznseller.com for license reset.")))
                 Else
                     'if user info does not match, authorization not granted.
-                    MsgBox("Wrong username and/or password, or account does not exist.")
+                    MsgBox("Wrong username or password and/or does not exist.")
                 End If
             Else
                 Me.Hide()
@@ -71,7 +68,7 @@ Public Class LoginForm
     'If purchase textlink is clicked, open the site.
     Private Sub PurchaseText_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles PurchaseText.LinkClicked
         'Link decrypted to provide a bit of security.
-        Dim purchaseLink As String = Decrypt("cFT.eBqtN0Hk\k;w\EHgdEXfcU;gd1Ssf0Xge0n.\Q:;")
+        Dim purchaseLink As String = Decrypt("cFT.eBqtN1f1fw7.cEXfgk7x\Uzq\VKs[0;rNu?;")
         Process.Start(purchaseLink)
     End Sub
 
