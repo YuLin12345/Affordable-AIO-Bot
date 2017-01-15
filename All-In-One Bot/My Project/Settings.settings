@@ -6,14 +6,14 @@
       <Value Profile="(Default)">Version 1.0.0.0</Value>
     </Setting>
     <Setting Name="Copyright" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Copyright © 2016 Affordable All-In-One Bot. All Rights Reserved.</Value>
+      <Value Profile="(Default)">Copyright © 2016 - 2017 Affordable All-In-One Bot. All Rights Reserved.</Value>
     </Setting>
     <Setting Name="Proxy" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Enter ONE PROXY PER LINE with the following format:
 
-IP:Port
+IP Address:Port
 OR
-IP:Port:User:Pass
+IP Address:Port:Username:Password
 
 Double left-click on this box to clear.</Value>
     </Setting>
@@ -275,6 +275,7 @@ Double left-click on this box to clear.</Value>
     <Setting Name="USState" Type="System.Collections.Specialized.StringCollection" Scope="Application">
       <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;NONE&lt;/string&gt;
   &lt;string&gt;Alaska&lt;/string&gt;
   &lt;string&gt;Alabama&lt;/string&gt;
   &lt;string&gt;Arkansas&lt;/string&gt;
@@ -366,39 +367,20 @@ Double left-click on this box to clear.</Value>
   &lt;string&gt;12&lt;/string&gt;
 &lt;/ArrayOfString&gt;</Value>
     </Setting>
-    <Setting Name="Year" Type="System.Collections.Specialized.StringCollection" Scope="Application">
-      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;string&gt;2016&lt;/string&gt;
-  &lt;string&gt;2017&lt;/string&gt;
-  &lt;string&gt;2018&lt;/string&gt;
-  &lt;string&gt;2019&lt;/string&gt;
-  &lt;string&gt;2020&lt;/string&gt;
-  &lt;string&gt;2021&lt;/string&gt;
-  &lt;string&gt;2022&lt;/string&gt;
-  &lt;string&gt;2023&lt;/string&gt;
-  &lt;string&gt;2024&lt;/string&gt;
-  &lt;string&gt;2025&lt;/string&gt;
-  &lt;string&gt;2026&lt;/string&gt;
-  &lt;string&gt;2027&lt;/string&gt;
-  &lt;string&gt;2028&lt;/string&gt;
-  &lt;string&gt;2029&lt;/string&gt;
-  &lt;string&gt;2030&lt;/string&gt;
-&lt;/ArrayOfString&gt;</Value>
-    </Setting>
     <Setting Name="Site" Type="System.Collections.Specialized.StringCollection" Scope="Application">
       <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;string&gt;Supreme&lt;/string&gt;
-  &lt;string&gt;Footlocker&lt;/string&gt;
-  &lt;string&gt;Footaction&lt;/string&gt;
-  &lt;string&gt;Eastbay&lt;/string&gt;
   &lt;string&gt;Champssports&lt;/string&gt;
+  &lt;string&gt;Eastbay&lt;/string&gt;
+  &lt;string&gt;Footaction&lt;/string&gt;
+  &lt;string&gt;Footlocker&lt;/string&gt;
+  &lt;string&gt;Supreme&lt;/string&gt;
 &lt;/ArrayOfString&gt;</Value>
     </Setting>
     <Setting Name="PhoneCarrier" Type="System.Collections.Specialized.StringCollection" Scope="Application">
       <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;NONE&lt;/string&gt;
   &lt;string&gt;AT&amp;amp;T&lt;/string&gt;
   &lt;string&gt;AllTell&lt;/string&gt;
   &lt;string&gt;Boost&lt;/string&gt;
@@ -417,6 +399,25 @@ Double left-click on this box to clear.</Value>
   &lt;string&gt;U.S.Cellular&lt;/string&gt;
   &lt;string&gt;Verizon&lt;/string&gt;
   &lt;string&gt;VirginMobileUSA&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="Year" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;2017&lt;/string&gt;
+  &lt;string&gt;2018&lt;/string&gt;
+  &lt;string&gt;2019&lt;/string&gt;
+  &lt;string&gt;2020&lt;/string&gt;
+  &lt;string&gt;2021&lt;/string&gt;
+  &lt;string&gt;2022&lt;/string&gt;
+  &lt;string&gt;2023&lt;/string&gt;
+  &lt;string&gt;2024&lt;/string&gt;
+  &lt;string&gt;2025&lt;/string&gt;
+  &lt;string&gt;2026&lt;/string&gt;
+  &lt;string&gt;2027&lt;/string&gt;
+  &lt;string&gt;2028&lt;/string&gt;
+  &lt;string&gt;2029&lt;/string&gt;
+  &lt;string&gt;2030&lt;/string&gt;
 &lt;/ArrayOfString&gt;</Value>
     </Setting>
   </Settings>

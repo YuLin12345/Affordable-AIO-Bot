@@ -18,6 +18,7 @@ Module IO
             While sr.Peek() <> -1
                 row = sr.ReadLine()
                 column = row.Split(","c)
+                Main.AccountCountText.Text = Main.AccountCountText.Text + 1 'When account is imported, AccountCountText +1 for each account imported.
                 Main.AccountData.Rows.Add(column)
             End While
 
@@ -38,6 +39,7 @@ Module IO
             While sr.Peek() <> -1
                 row = sr.ReadLine()
                 column = row.Split(","c)
+                Main.CheckoutCountText.Text = Main.CheckoutCountText.Text + 1   'When checkout is imported, CheckoutCountText +1 for each checkout imported.
                 Main.CheckoutData.Rows.Add(column)
             End While
 
@@ -115,6 +117,11 @@ Module IO
 
             sr.Close()
         End If
+
+        'When accounts are loaded, loop through each and initialize the AccountCountText + 1.
+        For Each EmailA As DataGridViewRow In Main.AccountData.Rows
+            Main.AccountCountText.Text = Main.AccountCountText.Text + 1
+        Next
     End Sub
 
     'Load checkout.
@@ -133,6 +140,11 @@ Module IO
 
             sr.Close()
         End If
+
+        'When checkouts are loaded, loop through each and initialize the CheckoutCountText + 1.
+        For Each Profile As DataGridViewRow In Main.AccountData.Rows
+            Main.CheckoutCountText.Text = Main.CheckoutCountText.Text + 1
+        Next
     End Sub
 
     'Save account.
@@ -231,39 +243,66 @@ Module IO
         'Check if guest checkbox is enable or disable.
         If (Guest = 0) Then
             Guest = "Off"
+
+            'Check if profile name already exists.
+            For Each ProfileRow As DataGridViewRow In Main.CheckoutData.Rows
+                If (ProfileRow.Cells("Profile").Value = AccountAddForm.ProfileBox.Text) Then
+                    Exist = True
+                End If
+            Next
+
+            'Use to debug the output.
+            'Console.WriteLine("EMail: " + EMail + " Password: " + Password + " Size: " + Size + " Site: " + Site + " Link: " + Link + " Keyword: " + Keyword + " Profile: " + Profile + " Guest: " + Guest + " Notification EMail: " + NotificationEMail + " Phone Carrier: " + PhoneCarrier + " Notification Number: " + NotificationNumber)
+
+            'Check if the following boxes are filled out.
+            If (EMail = "" Or Password = "" Or Size = "" Or Site = "") Then
+                MsgBox("Please make sure boxes with * are filled out.")
+            ElseIf (Not EMail.Contains("@")) Then
+                MsgBox("Not a valid E-Mail. It does not contain @.")
+            ElseIf ((Not Link = "") And (Not Link.Contains("http://") And Not Link.Contains("https://"))) Then
+                MsgBox("Not a valid Link. It does not start with http:// or https://.")
+            ElseIf ((Not Profile = "") And (Exist = False)) Then
+                MsgBox("Profile does not exist.")
+            Else
+                Main.AccountCountText.Text = Main.AccountCountText.Text + 1 'When a new account is added AccountCountText + 1.
+                Main.AccountData.Rows.Add(New String() {EMail, Password, Size, Site, Link, Keyword, Profile, "", Guest, NotificationEMail, PhoneCarrier, NotificationNumber})   'Add the entered data into Main Form Account Data (DataGridView).
+                AccountAddForm.Close()
+            End If
         Else
             Guest = "On"
-        End If
 
-        'Check if profile name already exists.
-        For Each ProfileRow As DataGridViewRow In Main.CheckoutData.Rows
-            If (ProfileRow.Cells("Profile").Value = AccountAddForm.ProfileBox.Text) Then
-                Exist = True
+            'Check if profile name already exists.
+            For Each ProfileRow As DataGridViewRow In Main.CheckoutData.Rows
+                If (ProfileRow.Cells("Profile").Value = AccountAddForm.ProfileBox.Text) Then
+                    Exist = True
+                End If
+            Next
+
+            'Use to debug the output.
+            'Console.WriteLine("EMail: " + EMail + " Size: " + Size + " Site: " + Site + " Link: " + Link + " Keyword: " + Keyword + " Profile: " + Profile + " Guest: " + Guest + " Notification EMail: " + NotificationEMail + " Phone Carrier: " + PhoneCarrier + " Notification Number: " + NotificationNumber)
+
+            'Check if the following boxes are filled out.
+            If (EMail = "" Or Size = "" Or Site = "") Then
+                MsgBox("Please make sure boxes with * are filled out.")
+            ElseIf (Not EMail.Contains("@")) Then
+                MsgBox("Not a valid E-Mail. It does not contain @.")
+            ElseIf ((Not Link = "") And (Not Link.Contains("http://") And Not Link.Contains("https://"))) Then
+                MsgBox("Not a valid Link. It does not start with http:// or https://.")
+            ElseIf ((Not Profile = "") And (Exist = False)) Then
+                MsgBox("Profile does not exist.")
+            Else
+                Main.AccountCountText.Text = Main.AccountCountText.Text + 1 'When a new account is added AccountCountText + 1.
+                Main.AccountData.Rows.Add(New String() {EMail, "", Size, Site, Link, Keyword, Profile, "", Guest, NotificationEMail, PhoneCarrier, NotificationNumber}) 'Add the entered data into Main Form Account Data (DataGridView).
+                AccountAddForm.Close()
             End If
-        Next
-
-        'Use to debug the output.
-        'Console.WriteLine("EMail: " + EMail + " Password: " + Password + " Size: " + Size + " Site: " + Site + " Link: " + Link + " Keyword: " + Keyword + " Profile: " + Profile + " Guest: " + Guest + " Notification EMail: " + NotificationEMail + " Phone Carrier: " + PhoneCarrier + " Notification Number: " + NotificationNumber)
-
-        'Check if the following boxes are filled out.
-        If (EMail = "" Or Password = "" Or Size = "" Or Site = "") Then
-            MsgBox("Please make sure boxes with * are filled out.")
-        ElseIf (Not EMail.Contains("@"))
-            MsgBox("Not a valid E-Mail. It does not contain @.")
-        ElseIf ((Not Link = "") And (Not Link.Contains("http://") And Not Link.Contains("https://")) Or (Not Link = "") And (Not Link.Contains("https://") And Not Link.Contains("http://")))
-            MsgBox("Not a valid Link. It does not start with http:// or https://.")
-        ElseIf ((Not Profile = "") And (Exist = False))
-            MsgBox("Profile does not exist.")
-        Else
-            Main.AccountData.Rows.Add(New String() {EMail, Password, Size, Site, Link, Keyword, Profile, "", Guest, NotificationEMail, PhoneCarrier, NotificationNumber})
-            AccountAddForm.Close()
         End If
     End Sub
 
+    'Add checkout profile.
     Public Sub AddCheckout()
 
-        'Variables to get string from textBox.
-        Dim Profile, FirstName, LastName, Address1, Address2, ZipCode, City, USState, Country, Phone, CardType, CardNumber, Month, Year, CVV As String
+        'Variables to get String from TextBox.
+        Dim Profile, FirstName, LastName, Address1, Address2, ZipCode, City, USState, Country, Phone, Email, CardType, CardNumber, Month, Year, CVV As String
         Dim exist As Boolean = False
 
         Profile = CheckoutAddForm.ProfileBox.Text
@@ -276,6 +315,7 @@ Module IO
         USState = CheckoutAddForm.USStateComboBox.Text
         Country = CheckoutAddForm.CountryComboBox.Text
         Phone = CheckoutAddForm.PhoneBox.Text
+        Email = CheckoutAddForm.EmailBox.Text
         CardType = CheckoutAddForm.CardTypeComboBox.Text
         CardNumber = CheckoutAddForm.CardNumberBox.Text
         Month = CheckoutAddForm.MonthComboBox.Text
@@ -284,19 +324,21 @@ Module IO
 
         'Check if profile name already exists.
         For Each ProfileRow As DataGridViewRow In Main.CheckoutData.Rows
-            If (ProfileRow.Cells("Profile").Value = CheckoutAddForm.ProfileBox.Text) Then
+            If ProfileRow.Cells("Profile").Value = CheckoutAddForm.ProfileBox.Text Then
                 exist = True
             End If
         Next
 
         'Use to debug the output.
-        'Console.WriteLine("Profile: " + Profile + " First Name: " + FirstName + " Last Name: " + LastName + " Address 1: " + Address1 + " Address 2: " + Address2 + " Zip Code: " + ZipCode + " City: " + City + " State: " + USState + " Country: " + Country + " Phone: " + Phone + " Card Type: " + CardType + " Card Number: " + CardNumber + " Month: " + Month + " Year: " + Year + " CVV: " + CVV)
+        'Console.WriteLine("Profile: " + Profile + " First Name: " + FirstName + " Last Name: " + LastName + " Address 1: " + Address1 + " Address 2: " + Address2 + " Zip Code: " + ZipCode + " City: " + City + " State: " + USState + " Country: " + Country + " Phone: " + Phone + " Email: " + Email + " Card Type: " + CardType + " Card Number: " + CardNumber + " Month: " + Month + " Year: " + Year + " CVV: " + CVV)
 
         'Check if the following boxes are filled out.
-        If (Profile = "" Or FirstName = "" Or LastName = "" Or Address1 = "" Or ZipCode = "" Or City = "" Or USState = "" Or Country = "" Or Phone = "" Or CardType = "" Or CardNumber = "" Or Month = "" Or Year = "" Or CVV = "") Then
+        If (Profile = "" Or FirstName = "" Or LastName = "" Or Address1 = "" Or ZipCode = "" Or City = "" Or USState = "" Or Country = "" Or Phone = "" Or Email = "" Or CardType = "" Or CardNumber = "" Or Month = "" Or Year = "" Or CVV = "") Then
             MsgBox("Please make sure boxes with * are filled out.")
-        ElseIf (exist = True)
+        ElseIf (exist = True) Then
             MsgBox("Profile Name already exist.")
+        ElseIf ((Not Email.Contains("@"))) Then
+            MsgBox("Not a valid E-Mail. It does not contain @.")
         ElseIf ((CardType.Equals("American Express")) And (CheckoutAddForm.CVVBox.Text.Length < 4)) Then
             MsgBox("American Express Card has four digit CVV.")
         ElseIf ((CardType.Equals("Discover")) And (CheckoutAddForm.CVVBox.Text.Length < 3)) Then
@@ -306,7 +348,8 @@ Module IO
         ElseIf ((CardType.Equals("Visa")) And (CheckoutAddForm.CVVBox.Text.Length < 3)) Then
             MsgBox("Visa Card has three digit CVV.")
         Else
-            Main.CheckoutData.Rows.Add(New String() {Profile, FirstName, LastName, Address1, Address2, ZipCode, City, USState, Country, Phone, CardType, CardNumber, Month, Year, CVV})
+            Main.CheckoutCountText.Text = Main.CheckoutCountText.Text + 1 'When a new checkout is added CheckoutCountText + 1.
+            Main.CheckoutData.Rows.Add(New String() {Profile, FirstName, LastName, Address1, Address2, ZipCode, City, USState, Country, Phone, Email, CardType, CardNumber, Month, Year, CVV})  'Add the entered data into Main Form Checkout Data (DataGridView).
             CheckoutAddForm.Close()
         End If
     End Sub

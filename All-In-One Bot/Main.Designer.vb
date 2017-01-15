@@ -26,13 +26,15 @@ Partial Class Main
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.AccountTab = New System.Windows.Forms.TabPage()
         Me.AccountManagementGroup = New System.Windows.Forms.GroupBox()
+        Me.AccountCountText = New System.Windows.Forms.Label()
+        Me.AccountCountLabel = New System.Windows.Forms.Label()
         Me.AccountLink = New System.Windows.Forms.LinkLabel()
         Me.AccountImportButton = New System.Windows.Forms.Button()
         Me.AccountCloneButton = New System.Windows.Forms.Button()
         Me.AccountExportButton = New System.Windows.Forms.Button()
         Me.AccountRemoveButton = New System.Windows.Forms.Button()
         Me.AccountData = New System.Windows.Forms.DataGridView()
-        Me.Email = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmailA = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Password = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MainSize = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MainSite = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -62,6 +64,7 @@ Partial Class Main
         Me.State = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Country = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Phone = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmailC = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CardType = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CardNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Month = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -95,6 +98,8 @@ Partial Class Main
         Me.CheckoutImportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CheckoutExportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CheckoutRemoveAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckoutCountLabel = New System.Windows.Forms.Label()
+        Me.CheckoutCountText = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.AccountTab.SuspendLayout()
         Me.AccountManagementGroup.SuspendLayout()
@@ -134,6 +139,8 @@ Partial Class Main
         '
         'AccountManagementGroup
         '
+        Me.AccountManagementGroup.Controls.Add(Me.AccountCountText)
+        Me.AccountManagementGroup.Controls.Add(Me.AccountCountLabel)
         Me.AccountManagementGroup.Controls.Add(Me.AccountLink)
         Me.AccountManagementGroup.Controls.Add(Me.AccountImportButton)
         Me.AccountManagementGroup.Controls.Add(Me.AccountCloneButton)
@@ -145,6 +152,24 @@ Partial Class Main
         Me.AccountManagementGroup.TabIndex = 0
         Me.AccountManagementGroup.TabStop = False
         Me.AccountManagementGroup.Text = "Account Management"
+        '
+        'AccountCountText
+        '
+        Me.AccountCountText.AutoSize = True
+        Me.AccountCountText.Location = New System.Drawing.Point(1223, 23)
+        Me.AccountCountText.Name = "AccountCountText"
+        Me.AccountCountText.Size = New System.Drawing.Size(13, 13)
+        Me.AccountCountText.TabIndex = 13
+        Me.AccountCountText.Text = "0"
+        '
+        'AccountCountLabel
+        '
+        Me.AccountCountLabel.AutoSize = True
+        Me.AccountCountLabel.Location = New System.Drawing.Point(1167, 23)
+        Me.AccountCountLabel.Name = "AccountCountLabel"
+        Me.AccountCountLabel.Size = New System.Drawing.Size(50, 13)
+        Me.AccountCountLabel.TabIndex = 12
+        Me.AccountCountLabel.Text = "Account:"
         '
         'AccountLink
         '
@@ -198,20 +223,20 @@ Partial Class Main
         Me.AccountData.AllowUserToAddRows = False
         Me.AccountData.AllowUserToOrderColumns = True
         Me.AccountData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.AccountData.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Email, Me.Password, Me.MainSize, Me.MainSite, Me.Link, Me.Keyword, Me.Checkout, Me.Proxy, Me.Guest, Me.NotificiationEmail, Me.PhoneCarrier, Me.NotificiationNumber})
+        Me.AccountData.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EmailA, Me.Password, Me.MainSize, Me.MainSite, Me.Link, Me.Keyword, Me.Checkout, Me.Proxy, Me.Guest, Me.NotificiationEmail, Me.PhoneCarrier, Me.NotificiationNumber})
         Me.AccountData.Location = New System.Drawing.Point(0, 47)
         Me.AccountData.Name = "AccountData"
         Me.AccountData.ReadOnly = True
         Me.AccountData.Size = New System.Drawing.Size(1252, 602)
         Me.AccountData.TabIndex = 0
         '
-        'Email
+        'EmailA
         '
-        Me.Email.HeaderText = "Email"
-        Me.Email.Name = "Email"
-        Me.Email.ReadOnly = True
-        Me.Email.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Email.Width = 120
+        Me.EmailA.HeaderText = "Email"
+        Me.EmailA.Name = "EmailA"
+        Me.EmailA.ReadOnly = True
+        Me.EmailA.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.EmailA.Width = 120
         '
         'Password
         '
@@ -250,10 +275,11 @@ Partial Class Main
         '
         'Checkout
         '
-        Me.Checkout.HeaderText = "Checkout"
+        Me.Checkout.HeaderText = "Checkout Profile"
         Me.Checkout.Name = "Checkout"
         Me.Checkout.ReadOnly = True
         Me.Checkout.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Checkout.Width = 120
         '
         'Proxy
         '
@@ -304,6 +330,8 @@ Partial Class Main
         'CheckoutManagementGroup
         '
         Me.CheckoutManagementGroup.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.CheckoutManagementGroup.Controls.Add(Me.CheckoutCountText)
+        Me.CheckoutManagementGroup.Controls.Add(Me.CheckoutCountLabel)
         Me.CheckoutManagementGroup.Controls.Add(Me.CheckoutLink)
         Me.CheckoutManagementGroup.Controls.Add(Me.CheckoutCloneButton)
         Me.CheckoutManagementGroup.Controls.Add(Me.CheckoutImportButton)
@@ -368,7 +396,7 @@ Partial Class Main
         Me.CheckoutData.AllowUserToAddRows = False
         Me.CheckoutData.AllowUserToOrderColumns = True
         Me.CheckoutData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.CheckoutData.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Profile, Me.FirstName, Me.LastName, Me.Address1, Me.Address2, Me.ZipCode, Me.City, Me.State, Me.Country, Me.Phone, Me.CardType, Me.CardNumber, Me.Month, Me.Year, Me.CVV})
+        Me.CheckoutData.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Profile, Me.FirstName, Me.LastName, Me.Address1, Me.Address2, Me.ZipCode, Me.City, Me.State, Me.Country, Me.Phone, Me.EmailC, Me.CardType, Me.CardNumber, Me.Month, Me.Year, Me.CVV})
         Me.CheckoutData.Location = New System.Drawing.Point(0, 47)
         Me.CheckoutData.Name = "CheckoutData"
         Me.CheckoutData.ReadOnly = True
@@ -377,7 +405,7 @@ Partial Class Main
         '
         'Profile
         '
-        Me.Profile.HeaderText = "Profile"
+        Me.Profile.HeaderText = "Profile Name"
         Me.Profile.Name = "Profile"
         Me.Profile.ReadOnly = True
         Me.Profile.Width = 90
@@ -442,6 +470,12 @@ Partial Class Main
         Me.Phone.Name = "Phone"
         Me.Phone.ReadOnly = True
         Me.Phone.Width = 120
+        '
+        'EmailC
+        '
+        Me.EmailC.HeaderText = "Email"
+        Me.EmailC.Name = "EmailC"
+        Me.EmailC.ReadOnly = True
         '
         'CardType
         '
@@ -683,6 +717,24 @@ Partial Class Main
         Me.CheckoutRemoveAllToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
         Me.CheckoutRemoveAllToolStripMenuItem.Text = "Remove All"
         '
+        'CheckoutCountLabel
+        '
+        Me.CheckoutCountLabel.AutoSize = True
+        Me.CheckoutCountLabel.Location = New System.Drawing.Point(1129, 23)
+        Me.CheckoutCountLabel.Name = "CheckoutCountLabel"
+        Me.CheckoutCountLabel.Size = New System.Drawing.Size(88, 13)
+        Me.CheckoutCountLabel.TabIndex = 17
+        Me.CheckoutCountLabel.Text = "Checkout Profile:"
+        '
+        'CheckoutCountText
+        '
+        Me.CheckoutCountText.AutoSize = True
+        Me.CheckoutCountText.Location = New System.Drawing.Point(1223, 23)
+        Me.CheckoutCountText.Name = "CheckoutCountText"
+        Me.CheckoutCountText.Size = New System.Drawing.Size(13, 13)
+        Me.CheckoutCountText.TabIndex = 18
+        Me.CheckoutCountText.Text = "0"
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -732,7 +784,6 @@ Partial Class Main
     Friend WithEvents ImportFile As OpenFileDialog
     Friend WithEvents ExportFile As SaveFileDialog
     Friend WithEvents AccountLink As LinkLabel
-    Friend WithEvents AutomaticUpdater As wyDay.Controls.AutomaticUpdater
     Friend WithEvents CheckoutTab As TabPage
     Friend WithEvents CheckoutData As DataGridView
     Friend WithEvents AccountManagementGroup As GroupBox
@@ -741,21 +792,6 @@ Partial Class Main
     Friend WithEvents CheckoutImportButton As Button
     Friend WithEvents CheckoutExportButton As Button
     Friend WithEvents CheckoutRemoveButton As Button
-    Friend WithEvents Profile As DataGridViewTextBoxColumn
-    Friend WithEvents FirstName As DataGridViewTextBoxColumn
-    Friend WithEvents LastName As DataGridViewTextBoxColumn
-    Friend WithEvents Address1 As DataGridViewTextBoxColumn
-    Friend WithEvents Address2 As DataGridViewTextBoxColumn
-    Friend WithEvents ZipCode As DataGridViewTextBoxColumn
-    Friend WithEvents City As DataGridViewTextBoxColumn
-    Friend WithEvents State As DataGridViewTextBoxColumn
-    Friend WithEvents Country As DataGridViewTextBoxColumn
-    Friend WithEvents Phone As DataGridViewTextBoxColumn
-    Friend WithEvents CardType As DataGridViewTextBoxColumn
-    Friend WithEvents CardNumber As DataGridViewTextBoxColumn
-    Friend WithEvents Month As DataGridViewTextBoxColumn
-    Friend WithEvents Year As DataGridViewTextBoxColumn
-    Friend WithEvents CVV As DataGridViewTextBoxColumn
     Friend WithEvents AccountContextMenuStrip As ContextMenuStrip
     Friend WithEvents AccountRemoveToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AccountCloneToolStripMenuItem As ToolStripMenuItem
@@ -774,7 +810,8 @@ Partial Class Main
     Friend WithEvents AccountLinkToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AccountKeywordToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AccountSiteToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Email As DataGridViewTextBoxColumn
+    Private WithEvents AutomaticUpdater As wyDay.Controls.AutomaticUpdater
+    Friend WithEvents EmailA As DataGridViewTextBoxColumn
     Friend WithEvents Password As DataGridViewTextBoxColumn
     Friend WithEvents MainSize As DataGridViewTextBoxColumn
     Friend WithEvents MainSite As DataGridViewTextBoxColumn
@@ -786,4 +823,24 @@ Partial Class Main
     Friend WithEvents NotificiationEmail As DataGridViewTextBoxColumn
     Friend WithEvents PhoneCarrier As DataGridViewTextBoxColumn
     Friend WithEvents NotificiationNumber As DataGridViewTextBoxColumn
+    Friend WithEvents Profile As DataGridViewTextBoxColumn
+    Friend WithEvents FirstName As DataGridViewTextBoxColumn
+    Friend WithEvents LastName As DataGridViewTextBoxColumn
+    Friend WithEvents Address1 As DataGridViewTextBoxColumn
+    Friend WithEvents Address2 As DataGridViewTextBoxColumn
+    Friend WithEvents ZipCode As DataGridViewTextBoxColumn
+    Friend WithEvents City As DataGridViewTextBoxColumn
+    Friend WithEvents State As DataGridViewTextBoxColumn
+    Friend WithEvents Country As DataGridViewTextBoxColumn
+    Friend WithEvents Phone As DataGridViewTextBoxColumn
+    Friend WithEvents EmailC As DataGridViewTextBoxColumn
+    Friend WithEvents CardType As DataGridViewTextBoxColumn
+    Friend WithEvents CardNumber As DataGridViewTextBoxColumn
+    Friend WithEvents Month As DataGridViewTextBoxColumn
+    Friend WithEvents Year As DataGridViewTextBoxColumn
+    Friend WithEvents CVV As DataGridViewTextBoxColumn
+    Friend WithEvents AccountCountText As Label
+    Friend WithEvents AccountCountLabel As Label
+    Friend WithEvents CheckoutCountText As Label
+    Friend WithEvents CheckoutCountLabel As Label
 End Class

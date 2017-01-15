@@ -4,7 +4,6 @@
 Public NotInheritable Class AboutBox
 
     Private Sub AboutBox_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
         Dim ApplicationTitle As String
 
         If My.Application.Info.Title <> "" Then

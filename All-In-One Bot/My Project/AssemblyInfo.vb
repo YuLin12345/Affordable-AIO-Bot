@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Automated sneaker bot to get shoes from different sites.")>
 <Assembly: AssemblyCompany("Affordable AIO Bot")>
 <Assembly: AssemblyProduct("Affordable AIO Bot")>
-<Assembly: AssemblyCopyright("Copyright © 2016 Affordable All-In-One Bot All Rights Reserved")>
+<Assembly: AssemblyCopyright("Copyright © 2016 - 2017 Affordable All-In-One Bot All Rights Reserved")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>

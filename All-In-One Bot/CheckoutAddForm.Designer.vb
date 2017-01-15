@@ -25,6 +25,8 @@ Partial Class CheckoutAddForm
         Me.components = New System.ComponentModel.Container()
         Me.ProfileText = New System.Windows.Forms.Label()
         Me.AddCheckoutGroup = New System.Windows.Forms.GroupBox()
+        Me.EmailBox = New System.Windows.Forms.TextBox()
+        Me.EmailText = New System.Windows.Forms.Label()
         Me.YearComboBox = New System.Windows.Forms.ComboBox()
         Me.MonthComboBox = New System.Windows.Forms.ComboBox()
         Me.USStateComboBox = New System.Windows.Forms.ComboBox()
@@ -62,14 +64,16 @@ Partial Class CheckoutAddForm
         'ProfileText
         '
         Me.ProfileText.AutoSize = True
-        Me.ProfileText.Location = New System.Drawing.Point(6, 34)
+        Me.ProfileText.Location = New System.Drawing.Point(6, 30)
         Me.ProfileText.Name = "ProfileText"
-        Me.ProfileText.Size = New System.Drawing.Size(43, 13)
+        Me.ProfileText.Size = New System.Drawing.Size(74, 13)
         Me.ProfileText.TabIndex = 0
-        Me.ProfileText.Text = "*Profile:"
+        Me.ProfileText.Text = "*Profile Name:"
         '
         'AddCheckoutGroup
         '
+        Me.AddCheckoutGroup.Controls.Add(Me.EmailBox)
+        Me.AddCheckoutGroup.Controls.Add(Me.EmailText)
         Me.AddCheckoutGroup.Controls.Add(Me.YearComboBox)
         Me.AddCheckoutGroup.Controls.Add(Me.MonthComboBox)
         Me.AddCheckoutGroup.Controls.Add(Me.USStateComboBox)
@@ -108,29 +112,45 @@ Partial Class CheckoutAddForm
         Me.AddCheckoutGroup.TabStop = False
         Me.AddCheckoutGroup.Text = "Add Checkout"
         '
+        'EmailBox
+        '
+        Me.EmailBox.Location = New System.Drawing.Point(310, 27)
+        Me.EmailBox.Name = "EmailBox"
+        Me.EmailBox.Size = New System.Drawing.Size(150, 20)
+        Me.EmailBox.TabIndex = 11
+        '
+        'EmailText
+        '
+        Me.EmailText.AutoSize = True
+        Me.EmailText.Location = New System.Drawing.Point(261, 30)
+        Me.EmailText.Name = "EmailText"
+        Me.EmailText.Size = New System.Drawing.Size(43, 13)
+        Me.EmailText.TabIndex = 0
+        Me.EmailText.Text = "*E-Mail:"
+        '
         'YearComboBox
         '
         Me.YearComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.YearComboBox.FormattingEnabled = True
-        Me.YearComboBox.Location = New System.Drawing.Point(448, 122)
+        Me.YearComboBox.Location = New System.Drawing.Point(448, 131)
         Me.YearComboBox.Name = "YearComboBox"
         Me.YearComboBox.Size = New System.Drawing.Size(60, 21)
-        Me.YearComboBox.TabIndex = 14
+        Me.YearComboBox.TabIndex = 15
         '
         'MonthComboBox
         '
         Me.MonthComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.MonthComboBox.FormattingEnabled = True
-        Me.MonthComboBox.Location = New System.Drawing.Point(382, 122)
+        Me.MonthComboBox.Location = New System.Drawing.Point(382, 131)
         Me.MonthComboBox.Name = "MonthComboBox"
         Me.MonthComboBox.Size = New System.Drawing.Size(60, 21)
-        Me.MonthComboBox.TabIndex = 13
+        Me.MonthComboBox.TabIndex = 14
         '
         'USStateComboBox
         '
         Me.USStateComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.USStateComboBox.FormattingEnabled = True
-        Me.USStateComboBox.Location = New System.Drawing.Point(69, 262)
+        Me.USStateComboBox.Location = New System.Drawing.Point(69, 265)
         Me.USStateComboBox.Name = "USStateComboBox"
         Me.USStateComboBox.Size = New System.Drawing.Size(150, 21)
         Me.USStateComboBox.TabIndex = 8
@@ -139,7 +159,7 @@ Partial Class CheckoutAddForm
         '
         Me.CountryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CountryComboBox.FormattingEnabled = True
-        Me.CountryComboBox.Location = New System.Drawing.Point(62, 295)
+        Me.CountryComboBox.Location = New System.Drawing.Point(62, 300)
         Me.CountryComboBox.Name = "CountryComboBox"
         Me.CountryComboBox.Size = New System.Drawing.Size(150, 21)
         Me.CountryComboBox.TabIndex = 9
@@ -148,17 +168,17 @@ Partial Class CheckoutAddForm
         '
         Me.CardTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CardTypeComboBox.FormattingEnabled = True
-        Me.CardTypeComboBox.Location = New System.Drawing.Point(330, 56)
+        Me.CardTypeComboBox.Location = New System.Drawing.Point(330, 62)
         Me.CardTypeComboBox.Name = "CardTypeComboBox"
         Me.CardTypeComboBox.Size = New System.Drawing.Size(150, 21)
-        Me.CardTypeComboBox.TabIndex = 11
+        Me.CardTypeComboBox.TabIndex = 12
         '
         'CheckoutAddCancelButton
         '
         Me.CheckoutAddCancelButton.Location = New System.Drawing.Point(433, 338)
         Me.CheckoutAddCancelButton.Name = "CheckoutAddCancelButton"
         Me.CheckoutAddCancelButton.Size = New System.Drawing.Size(75, 23)
-        Me.CheckoutAddCancelButton.TabIndex = 17
+        Me.CheckoutAddCancelButton.TabIndex = 18
         Me.CheckoutAddCancelButton.Text = "Cancel"
         Me.CheckoutAddCancelButton.UseVisualStyleBackColor = True
         '
@@ -167,21 +187,21 @@ Partial Class CheckoutAddForm
         Me.CheckoutAddSaveButton.Location = New System.Drawing.Point(352, 338)
         Me.CheckoutAddSaveButton.Name = "CheckoutAddSaveButton"
         Me.CheckoutAddSaveButton.Size = New System.Drawing.Size(75, 23)
-        Me.CheckoutAddSaveButton.TabIndex = 16
+        Me.CheckoutAddSaveButton.TabIndex = 17
         Me.CheckoutAddSaveButton.Text = "Save"
         Me.CheckoutAddSaveButton.UseVisualStyleBackColor = True
         '
         'CardNumberBox
         '
-        Me.CardNumberBox.Location = New System.Drawing.Point(343, 89)
+        Me.CardNumberBox.Location = New System.Drawing.Point(343, 97)
         Me.CardNumberBox.Name = "CardNumberBox"
         Me.CardNumberBox.Size = New System.Drawing.Size(150, 20)
-        Me.CardNumberBox.TabIndex = 12
+        Me.CardNumberBox.TabIndex = 13
         '
         'CardNumber
         '
         Me.CardNumber.AutoSize = True
-        Me.CardNumber.Location = New System.Drawing.Point(261, 92)
+        Me.CardNumber.Location = New System.Drawing.Point(261, 100)
         Me.CardNumber.Name = "CardNumber"
         Me.CardNumber.Size = New System.Drawing.Size(76, 13)
         Me.CardNumber.TabIndex = 0
@@ -189,28 +209,28 @@ Partial Class CheckoutAddForm
         '
         'CVVBox
         '
-        Me.CVVBox.Location = New System.Drawing.Point(302, 154)
+        Me.CVVBox.Location = New System.Drawing.Point(302, 167)
         Me.CVVBox.Name = "CVVBox"
         Me.CVVBox.Size = New System.Drawing.Size(150, 20)
-        Me.CVVBox.TabIndex = 15
+        Me.CVVBox.TabIndex = 16
         '
         'PhoneBox
         '
-        Me.PhoneBox.Location = New System.Drawing.Point(57, 328)
+        Me.PhoneBox.Location = New System.Drawing.Point(57, 335)
         Me.PhoneBox.Name = "PhoneBox"
         Me.PhoneBox.Size = New System.Drawing.Size(150, 20)
         Me.PhoneBox.TabIndex = 10
         '
         'CityBox
         '
-        Me.CityBox.Location = New System.Drawing.Point(43, 229)
+        Me.CityBox.Location = New System.Drawing.Point(43, 230)
         Me.CityBox.Name = "CityBox"
         Me.CityBox.Size = New System.Drawing.Size(150, 20)
         Me.CityBox.TabIndex = 7
         '
         'ZipCodeBox
         '
-        Me.ZipCodeBox.Location = New System.Drawing.Point(69, 196)
+        Me.ZipCodeBox.Location = New System.Drawing.Point(69, 195)
         Me.ZipCodeBox.Name = "ZipCodeBox"
         Me.ZipCodeBox.Size = New System.Drawing.Size(150, 20)
         Me.ZipCodeBox.TabIndex = 6
@@ -231,21 +251,21 @@ Partial Class CheckoutAddForm
         '
         'LastNameBox
         '
-        Me.LastNameBox.Location = New System.Drawing.Point(77, 97)
+        Me.LastNameBox.Location = New System.Drawing.Point(77, 95)
         Me.LastNameBox.Name = "LastNameBox"
         Me.LastNameBox.Size = New System.Drawing.Size(150, 20)
         Me.LastNameBox.TabIndex = 3
         '
         'FirstNameBox
         '
-        Me.FirstNameBox.Location = New System.Drawing.Point(76, 64)
+        Me.FirstNameBox.Location = New System.Drawing.Point(76, 60)
         Me.FirstNameBox.Name = "FirstNameBox"
         Me.FirstNameBox.Size = New System.Drawing.Size(150, 20)
         Me.FirstNameBox.TabIndex = 2
         '
         'ProfileBox
         '
-        Me.ProfileBox.Location = New System.Drawing.Point(55, 31)
+        Me.ProfileBox.Location = New System.Drawing.Point(86, 25)
         Me.ProfileBox.Name = "ProfileBox"
         Me.ProfileBox.Size = New System.Drawing.Size(150, 20)
         Me.ProfileBox.TabIndex = 1
@@ -253,7 +273,7 @@ Partial Class CheckoutAddForm
         'CVVText
         '
         Me.CVVText.AutoSize = True
-        Me.CVVText.Location = New System.Drawing.Point(261, 157)
+        Me.CVVText.Location = New System.Drawing.Point(261, 170)
         Me.CVVText.Name = "CVVText"
         Me.CVVText.Size = New System.Drawing.Size(35, 13)
         Me.CVVText.TabIndex = 0
@@ -262,7 +282,7 @@ Partial Class CheckoutAddForm
         'ExpireDateText
         '
         Me.ExpireDateText.AutoSize = True
-        Me.ExpireDateText.Location = New System.Drawing.Point(261, 125)
+        Me.ExpireDateText.Location = New System.Drawing.Point(261, 135)
         Me.ExpireDateText.Name = "ExpireDateText"
         Me.ExpireDateText.Size = New System.Drawing.Size(115, 13)
         Me.ExpireDateText.TabIndex = 0
@@ -271,7 +291,7 @@ Partial Class CheckoutAddForm
         'CardTypeText
         '
         Me.CardTypeText.AutoSize = True
-        Me.CardTypeText.Location = New System.Drawing.Point(261, 59)
+        Me.CardTypeText.Location = New System.Drawing.Point(261, 65)
         Me.CardTypeText.Name = "CardTypeText"
         Me.CardTypeText.Size = New System.Drawing.Size(63, 13)
         Me.CardTypeText.TabIndex = 0
@@ -280,7 +300,7 @@ Partial Class CheckoutAddForm
         'PhoneText
         '
         Me.PhoneText.AutoSize = True
-        Me.PhoneText.Location = New System.Drawing.Point(6, 331)
+        Me.PhoneText.Location = New System.Drawing.Point(6, 338)
         Me.PhoneText.Name = "PhoneText"
         Me.PhoneText.Size = New System.Drawing.Size(45, 13)
         Me.PhoneText.TabIndex = 0
@@ -289,7 +309,7 @@ Partial Class CheckoutAddForm
         'CountryText
         '
         Me.CountryText.AutoSize = True
-        Me.CountryText.Location = New System.Drawing.Point(6, 298)
+        Me.CountryText.Location = New System.Drawing.Point(6, 303)
         Me.CountryText.Name = "CountryText"
         Me.CountryText.Size = New System.Drawing.Size(50, 13)
         Me.CountryText.TabIndex = 0
@@ -298,7 +318,7 @@ Partial Class CheckoutAddForm
         'USStateText
         '
         Me.USStateText.AutoSize = True
-        Me.USStateText.Location = New System.Drawing.Point(6, 265)
+        Me.USStateText.Location = New System.Drawing.Point(6, 268)
         Me.USStateText.Name = "USStateText"
         Me.USStateText.Size = New System.Drawing.Size(57, 13)
         Me.USStateText.TabIndex = 0
@@ -307,7 +327,7 @@ Partial Class CheckoutAddForm
         'CityText
         '
         Me.CityText.AutoSize = True
-        Me.CityText.Location = New System.Drawing.Point(6, 232)
+        Me.CityText.Location = New System.Drawing.Point(6, 233)
         Me.CityText.Name = "CityText"
         Me.CityText.Size = New System.Drawing.Size(31, 13)
         Me.CityText.TabIndex = 0
@@ -316,7 +336,7 @@ Partial Class CheckoutAddForm
         'ZipCodeText
         '
         Me.ZipCodeText.AutoSize = True
-        Me.ZipCodeText.Location = New System.Drawing.Point(6, 199)
+        Me.ZipCodeText.Location = New System.Drawing.Point(6, 198)
         Me.ZipCodeText.Name = "ZipCodeText"
         Me.ZipCodeText.Size = New System.Drawing.Size(57, 13)
         Me.ZipCodeText.TabIndex = 0
@@ -343,7 +363,7 @@ Partial Class CheckoutAddForm
         'LastNameText
         '
         Me.LastNameText.AutoSize = True
-        Me.LastNameText.Location = New System.Drawing.Point(6, 100)
+        Me.LastNameText.Location = New System.Drawing.Point(6, 98)
         Me.LastNameText.Name = "LastNameText"
         Me.LastNameText.Size = New System.Drawing.Size(65, 13)
         Me.LastNameText.TabIndex = 0
@@ -352,7 +372,7 @@ Partial Class CheckoutAddForm
         'FirstNameText
         '
         Me.FirstNameText.AutoSize = True
-        Me.FirstNameText.Location = New System.Drawing.Point(6, 67)
+        Me.FirstNameText.Location = New System.Drawing.Point(6, 65)
         Me.FirstNameText.Name = "FirstNameText"
         Me.FirstNameText.Size = New System.Drawing.Size(64, 13)
         Me.FirstNameText.TabIndex = 0
@@ -408,4 +428,6 @@ Partial Class CheckoutAddForm
     Friend WithEvents YearComboBox As ComboBox
     Friend WithEvents MonthComboBox As ComboBox
     Friend WithEvents ToolTip As ToolTip
+    Friend WithEvents EmailBox As TextBox
+    Friend WithEvents EmailText As Label
 End Class

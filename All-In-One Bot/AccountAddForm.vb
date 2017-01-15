@@ -18,7 +18,7 @@ Public Class AccountAddForm
         If GuestCheckBox.Checked = True Then
             PasswordBox.Enabled = False
         Else
-            GuestCheckBox.Enabled = True
+            PasswordBox.Enabled = True
         End If
     End Sub
 
@@ -27,20 +27,16 @@ Public Class AccountAddForm
         SiteComboBox.DataSource = My.Settings.Site
         PhoneCarrierComboBox.DataSource = My.Settings.PhoneCarrier
 
-        ToolTip.SetToolTip(EMailBox, "Type account username / e-mail")
-        ToolTip.SetToolTip(PasswordBox, "Type account password")
-        ToolTip.SetToolTip(SizeBox, "Type Size")
-        ToolTip.SetToolTip(SiteComboBox, "Select site")
-        ToolTip.SetToolTip(LinkBox, "Type full link with Http:// or Https://")
-        ToolTip.SetToolTip(KeywordBox, "Type keyword for monitoring")
-        ToolTip.SetToolTip(ProfileBox, "Type checkout profile name")
-        ToolTip.SetToolTip(NotificationEMailBox, "Type e-mail to be notified")
-        ToolTip.SetToolTip(PhoneCarrierComboBox, "Select phone carrier to be able to receive text / sms")
-        ToolTip.SetToolTip(NotificationNumberBox, "Type phone number to be text / sms notified")
-        ToolTip.SetToolTip(GuestCheckBox, "Check if you want to use guest checkout")
-    End Sub
-
-    Private Sub ToolTip1_Popup(sender As Object, e As PopupEventArgs) Handles ToolTip1.Popup
-
+        ToolTip.SetToolTip(EMailBox, "Type account username / e-mail.")
+        ToolTip.SetToolTip(PasswordBox, "Type account password.")
+        ToolTip.SetToolTip(SizeBox, "Type Size.")
+        ToolTip.SetToolTip(SiteComboBox, "Select site.")
+        ToolTip.SetToolTip(LinkBox, "Type full link with http:// or https://.")
+        ToolTip.SetToolTip(KeywordBox, "Type keyword for monitoring.")
+        ToolTip.SetToolTip(ProfileBox, "Type checkout profile name.")
+        ToolTip.SetToolTip(NotificationEMailBox, "Type e-mail to be notified.")
+        ToolTip.SetToolTip(PhoneCarrierComboBox, "Select phone carrier to receive text / sms.")
+        ToolTip.SetToolTip(NotificationNumberBox, "Type phone number to receive text / sms notification.")
+        ToolTip.SetToolTip(GuestCheckBox, "Check if you want to use guest account.")
     End Sub
 End Class
