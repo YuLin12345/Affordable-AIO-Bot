@@ -4,9 +4,16 @@
 Public Class LinkEditForm
 
     Private Sub LinkEditFormOkayButton_Click(sender As Object, e As EventArgs) Handles LinkEditFormOkayButton.Click
-        For Each LinkRow As DataGridViewRow In Main.AccountData.Rows
-            LinkRow.Cells("Link").Value = LinkEditBox.Text
-        Next
+        Dim Link As String
+        Link = LinkEditBox.Text
+
+        If (Not Link.Contains("http://") And Not Link.Contains("https://")) Then
+            MsgBox("Not a valid Link. It does not start with http:// or https://.")
+        Else
+            For Each LinkRow As DataGridViewRow In Main.AccountData.Rows
+                LinkRow.Cells("Link").Value = LinkEditBox.Text
+            Next
+        End If
 
         'For debug, to check the value.
         'Console.WriteLine(LinkEditBox.Text)
