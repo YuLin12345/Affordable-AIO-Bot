@@ -36,6 +36,7 @@ Status: **Under Development**
  - Import and export accounts and checkout profiles.
  - Account and checkout profiles are seprated by tabs. Also has a log tab for logs.
  - Link to the Cart Form, Proxy Form, Tips Form.
+ - Included a wyUpdate button to check for updates and install it.
  
 - Maintenance Form
  - Check if the bot is currently under maintenance.
@@ -62,5 +63,14 @@ Status: **Under Development**
  - autosavecheckout.csv
  - autosaveproxy.csv
  
+- Added right click functions to remove, clone, import, export, remove all, and edit all for size, site, link, keyword.
+ 
 #
 **To-Do List:**
+
+- Finish GUI part.
+- Add selected edit functions.
+- Add proxy test against sites to see if it is blocked/banned and display ping.
+- Coding adding to cart functions.
+- Make start and stop button work.
+- Fix any bugs / errors.
