@@ -18,6 +18,7 @@ Module IO
             While sr.Peek() <> -1
                 row = sr.ReadLine()
                 column = row.Split(","c)
+                Main.AccountCountText.Text = Main.AccountCountText.Text + 1 'When account is imported, AccountCountText +1 for each account imported.
                 Main.AccountData.Rows.Add(column)
             End While
 
@@ -38,6 +39,7 @@ Module IO
             While sr.Peek() <> -1
                 row = sr.ReadLine()
                 column = row.Split(","c)
+                Main.CheckoutCountText.Text = Main.CheckoutCountText.Text + 1   'When checkout is imported, CheckoutCountText +1 for each checkout imported.
                 Main.CheckoutData.Rows.Add(column)
             End While
 
@@ -115,6 +117,11 @@ Module IO
 
             sr.Close()
         End If
+
+        'When accounts are loaded, loop through each and initialize the AccountCountText + 1.
+        For Each EmailA As DataGridViewRow In Main.AccountData.Rows
+            Main.AccountCountText.Text = Main.AccountCountText.Text + 1
+        Next
     End Sub
 
     'Load checkout.
@@ -133,6 +140,11 @@ Module IO
 
             sr.Close()
         End If
+
+        'When checkouts are loaded, loop through each and initialize the CheckoutCountText + 1.
+        For Each Profile As DataGridViewRow In Main.AccountData.Rows
+            Main.CheckoutCountText.Text = Main.CheckoutCountText.Text + 1
+        Next
     End Sub
 
     'Save account.
@@ -252,7 +264,8 @@ Module IO
             ElseIf ((Not Profile = "") And (Exist = False)) Then
                 MsgBox("Profile does not exist.")
             Else
-                Main.AccountData.Rows.Add(New String() {EMail, Password, Size, Site, Link, Keyword, Profile, "", Guest, NotificationEMail, PhoneCarrier, NotificationNumber})
+                Main.AccountCountText.Text = Main.AccountCountText.Text + 1 'When a new account is added AccountCountText + 1.
+                Main.AccountData.Rows.Add(New String() {EMail, Password, Size, Site, Link, Keyword, Profile, "", Guest, NotificationEMail, PhoneCarrier, NotificationNumber})   'Add the entered data into Main Form Account Data (DataGridView).
                 AccountAddForm.Close()
             End If
         Else
@@ -278,7 +291,8 @@ Module IO
             ElseIf ((Not Profile = "") And (Exist = False)) Then
                 MsgBox("Profile does not exist.")
             Else
-                Main.AccountData.Rows.Add(New String() {EMail, "", Size, Site, Link, Keyword, Profile, "", Guest, NotificationEMail, PhoneCarrier, NotificationNumber})
+                Main.AccountCountText.Text = Main.AccountCountText.Text + 1 'When a new account is added AccountCountText + 1.
+                Main.AccountData.Rows.Add(New String() {EMail, "", Size, Site, Link, Keyword, Profile, "", Guest, NotificationEMail, PhoneCarrier, NotificationNumber}) 'Add the entered data into Main Form Account Data (DataGridView).
                 AccountAddForm.Close()
             End If
         End If
@@ -334,7 +348,8 @@ Module IO
         ElseIf ((CardType.Equals("Visa")) And (CheckoutAddForm.CVVBox.Text.Length < 3)) Then
             MsgBox("Visa Card has three digit CVV.")
         Else
-            Main.CheckoutData.Rows.Add(New String() {Profile, FirstName, LastName, Address1, Address2, ZipCode, City, USState, Country, Phone, Email, CardType, CardNumber, Month, Year, CVV})
+            Main.CheckoutCountText.Text = Main.CheckoutCountText.Text + 1 'When a new checkout is added CheckoutCountText + 1.
+            Main.CheckoutData.Rows.Add(New String() {Profile, FirstName, LastName, Address1, Address2, ZipCode, City, USState, Country, Phone, Email, CardType, CardNumber, Month, Year, CVV})  'Add the entered data into Main Form Checkout Data (DataGridView).
             CheckoutAddForm.Close()
         End If
     End Sub

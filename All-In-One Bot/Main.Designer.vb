@@ -26,6 +26,8 @@ Partial Class Main
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.AccountTab = New System.Windows.Forms.TabPage()
         Me.AccountManagementGroup = New System.Windows.Forms.GroupBox()
+        Me.AccountCountText = New System.Windows.Forms.Label()
+        Me.AccountCountLabel = New System.Windows.Forms.Label()
         Me.AccountLink = New System.Windows.Forms.LinkLabel()
         Me.AccountImportButton = New System.Windows.Forms.Button()
         Me.AccountCloneButton = New System.Windows.Forms.Button()
@@ -52,6 +54,22 @@ Partial Class Main
         Me.CheckoutExportButton = New System.Windows.Forms.Button()
         Me.CheckoutRemoveButton = New System.Windows.Forms.Button()
         Me.CheckoutData = New System.Windows.Forms.DataGridView()
+        Me.Profile = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FirstName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LastName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Address1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Address2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ZipCode = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.City = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.State = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Country = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Phone = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmailC = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CardType = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CardNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Month = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Year = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CVV = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LogTab = New System.Windows.Forms.TabPage()
         Me.LogRichBox = New System.Windows.Forms.RichTextBox()
         Me.BotOptionsGroup = New System.Windows.Forms.GroupBox()
@@ -80,22 +98,8 @@ Partial Class Main
         Me.CheckoutImportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CheckoutExportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CheckoutRemoveAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Profile = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FirstName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LastName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Address1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Address2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ZipCode = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.City = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.State = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Country = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Phone = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmailC = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CardType = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CardNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Month = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Year = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CVV = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CheckoutCountLabel = New System.Windows.Forms.Label()
+        Me.CheckoutCountText = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.AccountTab.SuspendLayout()
         Me.AccountManagementGroup.SuspendLayout()
@@ -135,6 +139,8 @@ Partial Class Main
         '
         'AccountManagementGroup
         '
+        Me.AccountManagementGroup.Controls.Add(Me.AccountCountText)
+        Me.AccountManagementGroup.Controls.Add(Me.AccountCountLabel)
         Me.AccountManagementGroup.Controls.Add(Me.AccountLink)
         Me.AccountManagementGroup.Controls.Add(Me.AccountImportButton)
         Me.AccountManagementGroup.Controls.Add(Me.AccountCloneButton)
@@ -146,6 +152,24 @@ Partial Class Main
         Me.AccountManagementGroup.TabIndex = 0
         Me.AccountManagementGroup.TabStop = False
         Me.AccountManagementGroup.Text = "Account Management"
+        '
+        'AccountCountText
+        '
+        Me.AccountCountText.AutoSize = True
+        Me.AccountCountText.Location = New System.Drawing.Point(1223, 23)
+        Me.AccountCountText.Name = "AccountCountText"
+        Me.AccountCountText.Size = New System.Drawing.Size(13, 13)
+        Me.AccountCountText.TabIndex = 13
+        Me.AccountCountText.Text = "0"
+        '
+        'AccountCountLabel
+        '
+        Me.AccountCountLabel.AutoSize = True
+        Me.AccountCountLabel.Location = New System.Drawing.Point(1167, 23)
+        Me.AccountCountLabel.Name = "AccountCountLabel"
+        Me.AccountCountLabel.Size = New System.Drawing.Size(50, 13)
+        Me.AccountCountLabel.TabIndex = 12
+        Me.AccountCountLabel.Text = "Account:"
         '
         'AccountLink
         '
@@ -306,6 +330,8 @@ Partial Class Main
         'CheckoutManagementGroup
         '
         Me.CheckoutManagementGroup.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.CheckoutManagementGroup.Controls.Add(Me.CheckoutCountText)
+        Me.CheckoutManagementGroup.Controls.Add(Me.CheckoutCountLabel)
         Me.CheckoutManagementGroup.Controls.Add(Me.CheckoutLink)
         Me.CheckoutManagementGroup.Controls.Add(Me.CheckoutCloneButton)
         Me.CheckoutManagementGroup.Controls.Add(Me.CheckoutImportButton)
@@ -376,6 +402,115 @@ Partial Class Main
         Me.CheckoutData.ReadOnly = True
         Me.CheckoutData.Size = New System.Drawing.Size(1252, 602)
         Me.CheckoutData.TabIndex = 0
+        '
+        'Profile
+        '
+        Me.Profile.HeaderText = "Profile Name"
+        Me.Profile.Name = "Profile"
+        Me.Profile.ReadOnly = True
+        Me.Profile.Width = 90
+        '
+        'FirstName
+        '
+        Me.FirstName.HeaderText = "First Name"
+        Me.FirstName.Name = "FirstName"
+        Me.FirstName.ReadOnly = True
+        '
+        'LastName
+        '
+        Me.LastName.HeaderText = "Last Name"
+        Me.LastName.Name = "LastName"
+        Me.LastName.ReadOnly = True
+        '
+        'Address1
+        '
+        Me.Address1.HeaderText = "Address 1"
+        Me.Address1.Name = "Address1"
+        Me.Address1.ReadOnly = True
+        Me.Address1.Width = 140
+        '
+        'Address2
+        '
+        Me.Address2.HeaderText = "Address 2"
+        Me.Address2.Name = "Address2"
+        Me.Address2.ReadOnly = True
+        Me.Address2.Width = 130
+        '
+        'ZipCode
+        '
+        Me.ZipCode.HeaderText = "Zip Code"
+        Me.ZipCode.Name = "ZipCode"
+        Me.ZipCode.ReadOnly = True
+        Me.ZipCode.Width = 90
+        '
+        'City
+        '
+        Me.City.HeaderText = "City"
+        Me.City.Name = "City"
+        Me.City.ReadOnly = True
+        '
+        'State
+        '
+        Me.State.HeaderText = "State"
+        Me.State.Name = "State"
+        Me.State.ReadOnly = True
+        Me.State.Width = 120
+        '
+        'Country
+        '
+        Me.Country.HeaderText = "Country"
+        Me.Country.Name = "Country"
+        Me.Country.ReadOnly = True
+        Me.Country.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Country.Width = 120
+        '
+        'Phone
+        '
+        Me.Phone.HeaderText = "Phone"
+        Me.Phone.Name = "Phone"
+        Me.Phone.ReadOnly = True
+        Me.Phone.Width = 120
+        '
+        'EmailC
+        '
+        Me.EmailC.HeaderText = "Email"
+        Me.EmailC.Name = "EmailC"
+        Me.EmailC.ReadOnly = True
+        '
+        'CardType
+        '
+        Me.CardType.HeaderText = "Card Type"
+        Me.CardType.Name = "CardType"
+        Me.CardType.ReadOnly = True
+        Me.CardType.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        '
+        'CardNumber
+        '
+        Me.CardNumber.HeaderText = "Card Number"
+        Me.CardNumber.Name = "CardNumber"
+        Me.CardNumber.ReadOnly = True
+        Me.CardNumber.Width = 120
+        '
+        'Month
+        '
+        Me.Month.HeaderText = "Month"
+        Me.Month.Name = "Month"
+        Me.Month.ReadOnly = True
+        Me.Month.Width = 50
+        '
+        'Year
+        '
+        Me.Year.HeaderText = "Year"
+        Me.Year.Name = "Year"
+        Me.Year.ReadOnly = True
+        Me.Year.Width = 50
+        '
+        'CVV
+        '
+        Me.CVV.HeaderText = "CVV"
+        Me.CVV.Name = "CVV"
+        Me.CVV.ReadOnly = True
+        Me.CVV.Width = 50
         '
         'LogTab
         '
@@ -582,114 +717,23 @@ Partial Class Main
         Me.CheckoutRemoveAllToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
         Me.CheckoutRemoveAllToolStripMenuItem.Text = "Remove All"
         '
-        'Profile
+        'CheckoutCountLabel
         '
-        Me.Profile.HeaderText = "Profile Name"
-        Me.Profile.Name = "Profile"
-        Me.Profile.ReadOnly = True
-        Me.Profile.Width = 90
+        Me.CheckoutCountLabel.AutoSize = True
+        Me.CheckoutCountLabel.Location = New System.Drawing.Point(1129, 23)
+        Me.CheckoutCountLabel.Name = "CheckoutCountLabel"
+        Me.CheckoutCountLabel.Size = New System.Drawing.Size(88, 13)
+        Me.CheckoutCountLabel.TabIndex = 17
+        Me.CheckoutCountLabel.Text = "Checkout Profile:"
         '
-        'FirstName
+        'CheckoutCountText
         '
-        Me.FirstName.HeaderText = "First Name"
-        Me.FirstName.Name = "FirstName"
-        Me.FirstName.ReadOnly = True
-        '
-        'LastName
-        '
-        Me.LastName.HeaderText = "Last Name"
-        Me.LastName.Name = "LastName"
-        Me.LastName.ReadOnly = True
-        '
-        'Address1
-        '
-        Me.Address1.HeaderText = "Address 1"
-        Me.Address1.Name = "Address1"
-        Me.Address1.ReadOnly = True
-        Me.Address1.Width = 140
-        '
-        'Address2
-        '
-        Me.Address2.HeaderText = "Address 2"
-        Me.Address2.Name = "Address2"
-        Me.Address2.ReadOnly = True
-        Me.Address2.Width = 130
-        '
-        'ZipCode
-        '
-        Me.ZipCode.HeaderText = "Zip Code"
-        Me.ZipCode.Name = "ZipCode"
-        Me.ZipCode.ReadOnly = True
-        Me.ZipCode.Width = 90
-        '
-        'City
-        '
-        Me.City.HeaderText = "City"
-        Me.City.Name = "City"
-        Me.City.ReadOnly = True
-        '
-        'State
-        '
-        Me.State.HeaderText = "State"
-        Me.State.Name = "State"
-        Me.State.ReadOnly = True
-        Me.State.Width = 120
-        '
-        'Country
-        '
-        Me.Country.HeaderText = "Country"
-        Me.Country.Name = "Country"
-        Me.Country.ReadOnly = True
-        Me.Country.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Country.Width = 120
-        '
-        'Phone
-        '
-        Me.Phone.HeaderText = "Phone"
-        Me.Phone.Name = "Phone"
-        Me.Phone.ReadOnly = True
-        Me.Phone.Width = 120
-        '
-        'EmailC
-        '
-        Me.EmailC.HeaderText = "Email"
-        Me.EmailC.Name = "EmailC"
-        Me.EmailC.ReadOnly = True
-        '
-        'CardType
-        '
-        Me.CardType.HeaderText = "Card Type"
-        Me.CardType.Name = "CardType"
-        Me.CardType.ReadOnly = True
-        Me.CardType.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        '
-        'CardNumber
-        '
-        Me.CardNumber.HeaderText = "Card Number"
-        Me.CardNumber.Name = "CardNumber"
-        Me.CardNumber.ReadOnly = True
-        Me.CardNumber.Width = 120
-        '
-        'Month
-        '
-        Me.Month.HeaderText = "Month"
-        Me.Month.Name = "Month"
-        Me.Month.ReadOnly = True
-        Me.Month.Width = 50
-        '
-        'Year
-        '
-        Me.Year.HeaderText = "Year"
-        Me.Year.Name = "Year"
-        Me.Year.ReadOnly = True
-        Me.Year.Width = 50
-        '
-        'CVV
-        '
-        Me.CVV.HeaderText = "CVV"
-        Me.CVV.Name = "CVV"
-        Me.CVV.ReadOnly = True
-        Me.CVV.Width = 50
+        Me.CheckoutCountText.AutoSize = True
+        Me.CheckoutCountText.Location = New System.Drawing.Point(1223, 23)
+        Me.CheckoutCountText.Name = "CheckoutCountText"
+        Me.CheckoutCountText.Size = New System.Drawing.Size(13, 13)
+        Me.CheckoutCountText.TabIndex = 18
+        Me.CheckoutCountText.Text = "0"
         '
         'Main
         '
@@ -795,4 +839,8 @@ Partial Class Main
     Friend WithEvents Month As DataGridViewTextBoxColumn
     Friend WithEvents Year As DataGridViewTextBoxColumn
     Friend WithEvents CVV As DataGridViewTextBoxColumn
+    Friend WithEvents AccountCountText As Label
+    Friend WithEvents AccountCountLabel As Label
+    Friend WithEvents CheckoutCountText As Label
+    Friend WithEvents CheckoutCountLabel As Label
 End Class
