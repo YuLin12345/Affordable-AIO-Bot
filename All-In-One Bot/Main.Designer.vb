@@ -48,6 +48,8 @@ Partial Class Main
         Me.NotificiationNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CheckoutTab = New System.Windows.Forms.TabPage()
         Me.CheckoutManagementGroup = New System.Windows.Forms.GroupBox()
+        Me.CheckoutCountText = New System.Windows.Forms.Label()
+        Me.CheckoutCountLabel = New System.Windows.Forms.Label()
         Me.CheckoutLink = New System.Windows.Forms.LinkLabel()
         Me.CheckoutCloneButton = New System.Windows.Forms.Button()
         Me.CheckoutImportButton = New System.Windows.Forms.Button()
@@ -82,24 +84,27 @@ Partial Class Main
         Me.ImportFile = New System.Windows.Forms.OpenFileDialog()
         Me.ExportFile = New System.Windows.Forms.SaveFileDialog()
         Me.AccountContextMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.AccountRemoveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AccountCloneToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AccountImportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AccountExportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AccountCloneToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AccountRemoveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AccountRemoveAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AccountEditAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AccountSizeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AccountSiteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AccountLinkToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AccountKeywordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AccounEditSelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AccountSizeSelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AccountSiteSelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AccountLinkSelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AccountKeywordSelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CheckoutContextMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.CheckoutRemoveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CheckoutCloneToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CheckoutImportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CheckoutExportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckoutCloneToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckoutRemoveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CheckoutRemoveAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CheckoutCountLabel = New System.Windows.Forms.Label()
-        Me.CheckoutCountText = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.AccountTab.SuspendLayout()
         Me.AccountManagementGroup.SuspendLayout()
@@ -343,6 +348,24 @@ Partial Class Main
         Me.CheckoutManagementGroup.TabIndex = 0
         Me.CheckoutManagementGroup.TabStop = False
         Me.CheckoutManagementGroup.Text = "Checkout Management"
+        '
+        'CheckoutCountText
+        '
+        Me.CheckoutCountText.AutoSize = True
+        Me.CheckoutCountText.Location = New System.Drawing.Point(1223, 23)
+        Me.CheckoutCountText.Name = "CheckoutCountText"
+        Me.CheckoutCountText.Size = New System.Drawing.Size(13, 13)
+        Me.CheckoutCountText.TabIndex = 18
+        Me.CheckoutCountText.Text = "0"
+        '
+        'CheckoutCountLabel
+        '
+        Me.CheckoutCountLabel.AutoSize = True
+        Me.CheckoutCountLabel.Location = New System.Drawing.Point(1129, 23)
+        Me.CheckoutCountLabel.Name = "CheckoutCountLabel"
+        Me.CheckoutCountLabel.Size = New System.Drawing.Size(88, 13)
+        Me.CheckoutCountLabel.TabIndex = 17
+        Me.CheckoutCountLabel.Text = "Checkout Profile:"
         '
         'CheckoutLink
         '
@@ -614,90 +637,109 @@ Partial Class Main
         '
         'AccountContextMenuStrip
         '
-        Me.AccountContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AccountRemoveToolStripMenuItem, Me.AccountCloneToolStripMenuItem, Me.AccountImportToolStripMenuItem, Me.AccountExportToolStripMenuItem, Me.AccountRemoveAllToolStripMenuItem, Me.AccountEditAllToolStripMenuItem})
+        Me.AccountContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AccountImportToolStripMenuItem, Me.AccountExportToolStripMenuItem, Me.AccountCloneToolStripMenuItem, Me.AccountRemoveToolStripMenuItem, Me.AccountRemoveAllToolStripMenuItem, Me.AccountEditAllToolStripMenuItem, Me.AccounEditSelectedToolStripMenuItem})
         Me.AccountContextMenuStrip.Name = "ContextMenuStrip1"
         Me.AccountContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.AccountContextMenuStrip.Size = New System.Drawing.Size(135, 136)
-        '
-        'AccountRemoveToolStripMenuItem
-        '
-        Me.AccountRemoveToolStripMenuItem.Name = "AccountRemoveToolStripMenuItem"
-        Me.AccountRemoveToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
-        Me.AccountRemoveToolStripMenuItem.Text = "Remove"
-        '
-        'AccountCloneToolStripMenuItem
-        '
-        Me.AccountCloneToolStripMenuItem.Name = "AccountCloneToolStripMenuItem"
-        Me.AccountCloneToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
-        Me.AccountCloneToolStripMenuItem.Text = "Clone"
+        Me.AccountContextMenuStrip.Size = New System.Drawing.Size(142, 158)
         '
         'AccountImportToolStripMenuItem
         '
         Me.AccountImportToolStripMenuItem.Name = "AccountImportToolStripMenuItem"
-        Me.AccountImportToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.AccountImportToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
         Me.AccountImportToolStripMenuItem.Text = "Import"
         '
         'AccountExportToolStripMenuItem
         '
         Me.AccountExportToolStripMenuItem.Name = "AccountExportToolStripMenuItem"
-        Me.AccountExportToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.AccountExportToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
         Me.AccountExportToolStripMenuItem.Text = "Export"
+        '
+        'AccountCloneToolStripMenuItem
+        '
+        Me.AccountCloneToolStripMenuItem.Name = "AccountCloneToolStripMenuItem"
+        Me.AccountCloneToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.AccountCloneToolStripMenuItem.Text = "Clone"
+        '
+        'AccountRemoveToolStripMenuItem
+        '
+        Me.AccountRemoveToolStripMenuItem.Name = "AccountRemoveToolStripMenuItem"
+        Me.AccountRemoveToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.AccountRemoveToolStripMenuItem.Text = "Remove"
         '
         'AccountRemoveAllToolStripMenuItem
         '
         Me.AccountRemoveAllToolStripMenuItem.Name = "AccountRemoveAllToolStripMenuItem"
-        Me.AccountRemoveAllToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.AccountRemoveAllToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
         Me.AccountRemoveAllToolStripMenuItem.Text = "Remove All"
         '
         'AccountEditAllToolStripMenuItem
         '
         Me.AccountEditAllToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AccountSizeToolStripMenuItem, Me.AccountSiteToolStripMenuItem, Me.AccountLinkToolStripMenuItem, Me.AccountKeywordToolStripMenuItem})
         Me.AccountEditAllToolStripMenuItem.Name = "AccountEditAllToolStripMenuItem"
-        Me.AccountEditAllToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.AccountEditAllToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
         Me.AccountEditAllToolStripMenuItem.Text = "Edit All"
         '
         'AccountSizeToolStripMenuItem
         '
         Me.AccountSizeToolStripMenuItem.Name = "AccountSizeToolStripMenuItem"
-        Me.AccountSizeToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
+        Me.AccountSizeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AccountSizeToolStripMenuItem.Text = "Size"
         '
         'AccountSiteToolStripMenuItem
         '
         Me.AccountSiteToolStripMenuItem.Name = "AccountSiteToolStripMenuItem"
-        Me.AccountSiteToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
+        Me.AccountSiteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AccountSiteToolStripMenuItem.Text = "Site"
         '
         'AccountLinkToolStripMenuItem
         '
         Me.AccountLinkToolStripMenuItem.Name = "AccountLinkToolStripMenuItem"
-        Me.AccountLinkToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
+        Me.AccountLinkToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AccountLinkToolStripMenuItem.Text = "Link"
         '
         'AccountKeywordToolStripMenuItem
         '
         Me.AccountKeywordToolStripMenuItem.Name = "AccountKeywordToolStripMenuItem"
-        Me.AccountKeywordToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
+        Me.AccountKeywordToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AccountKeywordToolStripMenuItem.Text = "Keyword"
+        '
+        'AccounEditSelectedToolStripMenuItem
+        '
+        Me.AccounEditSelectedToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AccountSizeSelectedToolStripMenuItem, Me.AccountSiteSelectedToolStripMenuItem, Me.AccountLinkSelectedToolStripMenuItem, Me.AccountKeywordSelectedToolStripMenuItem})
+        Me.AccounEditSelectedToolStripMenuItem.Name = "AccounEditSelectedToolStripMenuItem"
+        Me.AccounEditSelectedToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.AccounEditSelectedToolStripMenuItem.Text = "Edit Selected"
+        '
+        'AccountSizeSelectedToolStripMenuItem
+        '
+        Me.AccountSizeSelectedToolStripMenuItem.Name = "AccountSizeSelectedToolStripMenuItem"
+        Me.AccountSizeSelectedToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AccountSizeSelectedToolStripMenuItem.Text = "Size"
+        '
+        'AccountSiteSelectedToolStripMenuItem
+        '
+        Me.AccountSiteSelectedToolStripMenuItem.Name = "AccountSiteSelectedToolStripMenuItem"
+        Me.AccountSiteSelectedToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AccountSiteSelectedToolStripMenuItem.Text = "Site"
+        '
+        'AccountLinkSelectedToolStripMenuItem
+        '
+        Me.AccountLinkSelectedToolStripMenuItem.Name = "AccountLinkSelectedToolStripMenuItem"
+        Me.AccountLinkSelectedToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AccountLinkSelectedToolStripMenuItem.Text = "Link"
+        '
+        'AccountKeywordSelectedToolStripMenuItem
+        '
+        Me.AccountKeywordSelectedToolStripMenuItem.Name = "AccountKeywordSelectedToolStripMenuItem"
+        Me.AccountKeywordSelectedToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AccountKeywordSelectedToolStripMenuItem.Text = "Keyword"
         '
         'CheckoutContextMenuStrip
         '
-        Me.CheckoutContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CheckoutRemoveToolStripMenuItem, Me.CheckoutCloneToolStripMenuItem, Me.CheckoutImportToolStripMenuItem, Me.CheckoutExportToolStripMenuItem, Me.CheckoutRemoveAllToolStripMenuItem})
+        Me.CheckoutContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CheckoutImportToolStripMenuItem, Me.CheckoutExportToolStripMenuItem, Me.CheckoutCloneToolStripMenuItem, Me.CheckoutRemoveToolStripMenuItem, Me.CheckoutRemoveAllToolStripMenuItem})
         Me.CheckoutContextMenuStrip.Name = "CheckoutContextMenuStrip"
         Me.CheckoutContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
         Me.CheckoutContextMenuStrip.Size = New System.Drawing.Size(135, 114)
-        '
-        'CheckoutRemoveToolStripMenuItem
-        '
-        Me.CheckoutRemoveToolStripMenuItem.Name = "CheckoutRemoveToolStripMenuItem"
-        Me.CheckoutRemoveToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
-        Me.CheckoutRemoveToolStripMenuItem.Text = "Remove"
-        '
-        'CheckoutCloneToolStripMenuItem
-        '
-        Me.CheckoutCloneToolStripMenuItem.Name = "CheckoutCloneToolStripMenuItem"
-        Me.CheckoutCloneToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
-        Me.CheckoutCloneToolStripMenuItem.Text = "Clone"
         '
         'CheckoutImportToolStripMenuItem
         '
@@ -711,29 +753,23 @@ Partial Class Main
         Me.CheckoutExportToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
         Me.CheckoutExportToolStripMenuItem.Text = "Export"
         '
+        'CheckoutCloneToolStripMenuItem
+        '
+        Me.CheckoutCloneToolStripMenuItem.Name = "CheckoutCloneToolStripMenuItem"
+        Me.CheckoutCloneToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.CheckoutCloneToolStripMenuItem.Text = "Clone"
+        '
+        'CheckoutRemoveToolStripMenuItem
+        '
+        Me.CheckoutRemoveToolStripMenuItem.Name = "CheckoutRemoveToolStripMenuItem"
+        Me.CheckoutRemoveToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.CheckoutRemoveToolStripMenuItem.Text = "Remove"
+        '
         'CheckoutRemoveAllToolStripMenuItem
         '
         Me.CheckoutRemoveAllToolStripMenuItem.Name = "CheckoutRemoveAllToolStripMenuItem"
         Me.CheckoutRemoveAllToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
         Me.CheckoutRemoveAllToolStripMenuItem.Text = "Remove All"
-        '
-        'CheckoutCountLabel
-        '
-        Me.CheckoutCountLabel.AutoSize = True
-        Me.CheckoutCountLabel.Location = New System.Drawing.Point(1129, 23)
-        Me.CheckoutCountLabel.Name = "CheckoutCountLabel"
-        Me.CheckoutCountLabel.Size = New System.Drawing.Size(88, 13)
-        Me.CheckoutCountLabel.TabIndex = 17
-        Me.CheckoutCountLabel.Text = "Checkout Profile:"
-        '
-        'CheckoutCountText
-        '
-        Me.CheckoutCountText.AutoSize = True
-        Me.CheckoutCountText.Location = New System.Drawing.Point(1223, 23)
-        Me.CheckoutCountText.Name = "CheckoutCountText"
-        Me.CheckoutCountText.Size = New System.Drawing.Size(13, 13)
-        Me.CheckoutCountText.TabIndex = 18
-        Me.CheckoutCountText.Text = "0"
         '
         'Main
         '
@@ -843,4 +879,9 @@ Partial Class Main
     Friend WithEvents AccountCountLabel As Label
     Friend WithEvents CheckoutCountText As Label
     Friend WithEvents CheckoutCountLabel As Label
+    Friend WithEvents AccounEditSelectedToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AccountSizeSelectedToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AccountSiteSelectedToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AccountLinkSelectedToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AccountKeywordSelectedToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -86,7 +86,7 @@ Partial Class KeywordEditForm
         Me.MaximumSize = New System.Drawing.Size(450, 150)
         Me.MinimumSize = New System.Drawing.Size(450, 150)
         Me.Name = "KeywordEditForm"
-        Me.Text = "Keyword Edit"
+        Me.Text = "Keyword Edit All"
         Me.KeywordEditGroup.ResumeLayout(False)
         Me.KeywordEditGroup.PerformLayout()
         Me.ResumeLayout(False)

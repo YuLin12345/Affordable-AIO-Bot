@@ -132,16 +132,34 @@
     <Compile Include="KeywordEditForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="KeywordEditSelectedForm.designer.vb">
+      <DependentUpon>KeywordEditSelectedForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KeywordEditSelectedForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LinkEditForm.Designer.vb">
       <DependentUpon>LinkEditForm.vb</DependentUpon>
     </Compile>
     <Compile Include="LinkEditForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="LinkEditSelectedForm.designer.vb">
+      <DependentUpon>LinkEditSelectedForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LinkEditSelectedForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SiteEditForm.Designer.vb">
       <DependentUpon>SiteEditForm.vb</DependentUpon>
     </Compile>
     <Compile Include="SiteEditForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SiteEditSelectedForm.designer.vb">
+      <DependentUpon>SiteEditSelectedForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SiteEditSelectedForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SizeEditForm.Designer.vb">
@@ -193,6 +211,12 @@
     <Compile Include="ProxyForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SizeEditSelectedForm.Designer.vb">
+      <DependentUpon>SizeEditSelectedForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SizeEditSelectedForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TipsForm.Designer.vb">
       <DependentUpon>TipsForm.vb</DependentUpon>
     </Compile>
@@ -219,11 +243,20 @@
     <EmbeddedResource Include="KeywordEditForm.resx">
       <DependentUpon>KeywordEditForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KeywordEditSelectedForm.resx">
+      <DependentUpon>KeywordEditSelectedForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LinkEditForm.resx">
       <DependentUpon>LinkEditForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LinkEditSelectedForm.resx">
+      <DependentUpon>LinkEditSelectedForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SiteEditForm.resx">
       <DependentUpon>SiteEditForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SiteEditSelectedForm.resx">
+      <DependentUpon>SiteEditSelectedForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SizeEditForm.resx">
       <DependentUpon>SizeEditForm.vb</DependentUpon>
@@ -245,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProxyForm.resx">
       <DependentUpon>ProxyForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SizeEditSelectedForm.resx">
+      <DependentUpon>SizeEditSelectedForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TipsForm.resx">
       <DependentUpon>TipsForm.vb</DependentUpon>

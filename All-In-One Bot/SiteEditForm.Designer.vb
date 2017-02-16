@@ -88,7 +88,7 @@ Partial Class SiteEditForm
         Me.MaximumSize = New System.Drawing.Size(450, 150)
         Me.MinimumSize = New System.Drawing.Size(450, 150)
         Me.Name = "SiteEditForm"
-        Me.Text = "Site Edit"
+        Me.Text = "Site Edit All"
         Me.SiteEditGroup.ResumeLayout(False)
         Me.SiteEditGroup.PerformLayout()
         Me.ResumeLayout(False)

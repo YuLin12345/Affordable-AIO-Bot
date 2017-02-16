@@ -134,24 +134,58 @@ Public Class Main
         CheckoutRemoveAll()
     End Sub
 
-    'Account tab contextMenuStrip right-click edit size.
+    'Account tab contextMenuStrip right-click edit all size.
     Private Sub AccountSizeToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AccountSizeToolStripMenuItem.Click
         EditSize()
     End Sub
 
-    'Account tab contextMenuStrip right-click edit site.
+    'Account tab contextMenuStrip right-click edit all site.
     Private Sub AccountSiteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AccountSiteToolStripMenuItem.Click
         EditSite()
     End Sub
 
-    'Account tab contextMenuStrip right-click edit link.
+    'Account tab contextMenuStrip right-click edit all link.
     Private Sub AccountLinkToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AccountLinkToolStripMenuItem.Click
         EditLink()
     End Sub
 
-    'Account tab contextMenuStrip right-click edit keyword.
+    'Account tab contextMenuStrip right-click edit all keyword.
     Private Sub AccountKeywordToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AccountKeywordToolStripMenuItem.Click
         EditKeyword()
+    End Sub
+
+    'Account tab contextMenuStrip right-click edit selected size.
+    Private Sub AccountSizeSelectedToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AccountSizeSelectedToolStripMenuItem.Click
+        EditSelectedSize()
+    End Sub
+
+    'Account tab contextMenuStrip right-click edit selected site.
+    Private Sub AccountSiteeSelectedToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AccountSiteSelectedToolStripMenuItem.Click
+        EditSelectedSite()
+    End Sub
+
+    'Account tab contextMenuStrip right-click edit selected link.
+    Private Sub AccountLinkSelectedToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AccountLinkSelectedToolStripMenuItem.Click
+        EditSelectedLink()
+    End Sub
+
+    'Account tab contextMenuStrip right-click edit selected keyword.
+    Private Sub AccountKeywordSelectedToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AccountKeywordSelectedToolStripMenuItem.Click
+        EditSelectedKeyword()
+    End Sub
+
+    'Account tab delete key.
+    Private Sub AccountData_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles AccountData.KeyDown
+        If e.KeyCode = Keys.Delete Then
+            AccountRemove()
+        End If
+    End Sub
+
+    'Checkout tab delete key.
+    Private Sub CheckoutData_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles CheckoutData.KeyDown
+        If e.KeyCode = Keys.Delete Then
+            CheckoutRemove()
+        End If
     End Sub
 
     'Auto load autosaveaccount.csv and autosavecheckout.csv onto the datagridview.
