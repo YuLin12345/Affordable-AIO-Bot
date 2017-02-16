@@ -27,5 +27,6 @@ Public Class ProxyForm
     'Auto load autosaveproxy.csv on to the richtextbox.
     Private Sub ProxyForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadProxy()
+        ProxyCheckComboBox.DataSource = My.Settings.Site
     End Sub
 End Class

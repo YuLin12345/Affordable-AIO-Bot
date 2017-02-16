@@ -2,6 +2,7 @@ Affordable AIO Bot, sneaker bot coded in VB.Net.
 #
 Status: **Under Development**
 #
+Description: Automated sneaker bot to get shoes from different sites. Supports auto checkout, account, and proxy management.
 **Completed List:**
 - Account Add Form
  - User can add normal accounts or guest accounts.
@@ -30,6 +31,7 @@ Status: **Under Development**
  - Authenticate users using backend server.
  - Check if user is banned. If so, displays the reason.
  - One license per computer, validated using HWID.
+ - Added login attempt counter. After three failed login attempt terminates the program.
  
 - Main Form
  - Main form where users can add, remove, edit, and clone accounts and checkout profiles.

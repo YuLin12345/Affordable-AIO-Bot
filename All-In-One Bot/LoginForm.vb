@@ -5,6 +5,8 @@ Imports System.Management
 
 Public Class LoginForm
 
+    Dim loginAttempt As Integer = 0
+
     'If login box is clicked, check the below statements.
     Private Sub LoginBox_Click(sender As Object, e As EventArgs) Handles LoginBox.Click
 
@@ -58,6 +60,13 @@ Public Class LoginForm
                 ElseIf (responseBody).Contains("not purchased - ") Then
                     MsgBox(("No bot license found for this account" & vbLf & "Visit http://affordableaiobot.website/ to buy it."))
                 Else
+                    'If loginAttempt count is greater than three, terminate the program. Adds security so people do not brtue force accounts.
+                    If (loginAttempt >= 3) Then
+                        MsgBox("Too many failed login attemps. Terminating program.")
+                        Close()
+                    End If
+
+                    loginAttempt = loginAttempt + 1 'Update loginAttempt by 1 on every fail attempt.
                     'if user info does not match, authorization not granted.
                     MsgBox("Wrong username and/or password, or account does not exist.")
                 End If
