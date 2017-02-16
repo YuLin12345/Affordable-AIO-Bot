@@ -1,4 +1,6 @@
 ﻿'@author Yu Lin
+'https://github.com/yulin12345
+'admin@yulin12345.site
 'This is form will add/save account information into the Main Form account datagridview.
 
 Public Class AccountAddForm

@@ -1,4 +1,6 @@
 ﻿'@author Yu Lin
+'https://github.com/yulin12345
+'admin@yulin12345.site
 'Size edit selected form, use to change selected sizes.
 
 Public Class SizeEditSelectedForm

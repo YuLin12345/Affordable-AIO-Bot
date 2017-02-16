@@ -1,4 +1,6 @@
 ﻿'@author Yu Lin
+'https://github.com/yulin12345
+'admin@yulin12345.site
 'This is form will display .txt file from the backend onto the richtextbox.
 
 Public Class TipsForm

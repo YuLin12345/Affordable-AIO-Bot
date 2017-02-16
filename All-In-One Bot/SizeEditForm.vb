@@ -1,4 +1,6 @@
 ﻿'@author Yu Lin
+'https://github.com/yulin12345
+'admin@yulin12345.site
 'Size edit form, use to change the size.
 
 Public Class SizeEditForm
