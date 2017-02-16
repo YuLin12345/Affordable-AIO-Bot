@@ -24,14 +24,20 @@ Description: Automated sneaker bot to get shoes from different sites. Supports a
 - Keyword Edit Form
  - User can edit account's keyword all at once.
 
+- Keyword Edit Selected Form
+ - User can edit selected account's keyword.
+
 - Link Edit Form
  - User can edit account's link all at once.
+
+- Link Edit Selected Form
+ - User can edit selected account's link.
 
 - Login Form
  - Authenticate users using backend server.
  - Check if user is banned. If so, displays the reason.
  - One license per computer, validated using HWID.
- - Added login attempt counter. After three failed login attempt terminates the program.
+ - Added login attempt counter. After three failed login attempts, terminates the program.
  
 - Main Form
  - Main form where users can add, remove, edit, and clone accounts and checkout profiles.
@@ -56,10 +62,16 @@ Description: Automated sneaker bot to get shoes from different sites. Supports a
 
 - Site Edit Form
  - User can edit account's site all at once.
- 
+
+- Site Edit Selected Form
+ - User can edit selected account's site.
+
 - Size Edit Form
  - User can edit account's size all at once.
  
+- Size Edit Selected Form
+ - User can edit selected account's size.
+
 - Tips Form
  - User can see tips or any release information.
  - Tips are posted using backend server.
@@ -68,8 +80,7 @@ Description: Automated sneaker bot to get shoes from different sites. Supports a
 **To-Do List:**
 
 - Finish GUI part.
-- Add selected account edit functions.
 - Add proxy test against sites to see if it is blocked/banned and display ping.
-- Coding adding to cart functions.
+- Code add to cart functions.
 - Make start and stop button work.
 - Fix any bugs/errors.
