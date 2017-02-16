@@ -86,7 +86,7 @@ Partial Class SizeEditForm
         Me.MaximumSize = New System.Drawing.Size(450, 150)
         Me.MinimumSize = New System.Drawing.Size(450, 150)
         Me.Name = "SizeEditForm"
-        Me.Text = "Size Edit"
+        Me.Text = "Size Edit All"
         Me.SizeEditGroup.ResumeLayout(False)
         Me.SizeEditGroup.PerformLayout()
         Me.ResumeLayout(False)

@@ -59,24 +59,44 @@ Module RightClick
         Main.CheckoutData.Rows.Clear()
     End Sub
 
-    'Display edit size form.
+    'Display edit all size form.
     Public Sub EditSize()
         SizeEditForm.Show()
     End Sub
 
-    'Display edit site form.
+    'Display edit all site form.
     Public Sub EditSite()
         SiteEditForm.Show()
     End Sub
 
-    'Display edit link form.
+    'Display edit all link form.
     Public Sub EditLink()
         LinkEditForm.Show()
     End Sub
 
-    'Display edit keyword form.
+    'Display edit all keyword form.
     Public Sub EditKeyword()
         KeywordEditForm.Show()
+    End Sub
+
+    'Display edit selected size form.
+    Public Sub EditSelectedSize()
+        SizeEditSelectedForm.Show()
+    End Sub
+
+    'Display edit selected site form.
+    Public Sub EditSelectedSite()
+        SiteEditSelectedForm.Show()
+    End Sub
+
+    'Display edit selected link form.
+    Public Sub EditSelectedLink()
+        LinkEditSelectedForm.Show()
+    End Sub
+
+    'Display edit selected keyword form.
+    Public Sub EditSelectedKeyword()
+        KeywordEditSelectedForm.Show()
     End Sub
 
     'Display browser form.

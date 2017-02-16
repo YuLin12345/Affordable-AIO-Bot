@@ -86,7 +86,7 @@ Partial Class LinkEditForm
         Me.MaximumSize = New System.Drawing.Size(450, 150)
         Me.MinimumSize = New System.Drawing.Size(450, 150)
         Me.Name = "LinkEditForm"
-        Me.Text = "Link Edit "
+        Me.Text = "Link Edit All"
         Me.LinkEditGroup.ResumeLayout(False)
         Me.LinkEditGroup.PerformLayout()
         Me.ResumeLayout(False)
