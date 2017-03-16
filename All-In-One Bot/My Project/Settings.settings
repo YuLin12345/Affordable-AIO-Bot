@@ -8,15 +8,6 @@
     <Setting Name="Copyright" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Copyright © 2016 - 2017 Affordable All-In-One Bot. All Rights Reserved.</Value>
     </Setting>
-    <Setting Name="Proxy" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Enter ONE PROXY PER LINE with the following format:
-
-IP Address:Port
-OR
-IP Address:Port:Username:Password
-
-Double left-click on this box to clear.</Value>
-    </Setting>
     <Setting Name="Country" Type="System.Collections.Specialized.StringCollection" Scope="Application">
       <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
@@ -419,6 +410,15 @@ Double left-click on this box to clear.</Value>
   &lt;string&gt;2029&lt;/string&gt;
   &lt;string&gt;2030&lt;/string&gt;
 &lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="Proxy" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Enter ONE PROXY PER LINE with the following format:
+
+IP Address:Port
+OR
+IP Address:Port:Username:Password
+
+Double left-click on this box to clear.</Value>
     </Setting>
   </Settings>
 </SettingsFile>

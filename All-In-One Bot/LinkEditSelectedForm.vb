@@ -1,4 +1,6 @@
 ﻿'@author Yu Lin
+'https://github.com/yulin12345
+'admin@yulin12345.site
 'Link edit selected form, use to change selected link.
 
 Public Class LinkEditSelectedForm

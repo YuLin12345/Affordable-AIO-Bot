@@ -1,4 +1,6 @@
 ﻿'@author Yu Lin
+'https://github.com/yulin12345
+'admin@yulin12345.site
 'Keyword edit form, use to change the keyword.
 
 Public Class KeywordEditForm

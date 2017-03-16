@@ -1,4 +1,6 @@
 ﻿'@author Yu Lin
+'https://github.com/yulin12345
+'admin@yulin12345.site
 'Main Form, where the magic happens.
 
 Public Class Main

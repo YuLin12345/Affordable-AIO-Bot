@@ -1,4 +1,6 @@
 ﻿'@author Yu Lin
+'https://github.com/yulin12345
+'admin@yulin12345.site
 'This form will display if the bot is under maintenance.
 
 Public Class MaintenanceForm

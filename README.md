@@ -1,9 +1,9 @@
 Affordable AIO Bot, sneaker bot coded in VB.Net.
+![Example](http://i.imgur.com/LH0fs05.png)
 #
 Status: **Under Development**
 
 Description: Automated sneaker bot to get shoes from different sites. Supports auto checkout, account, and proxy management.
-
 #
 **Completed List:**
 - Account Add Form
@@ -77,7 +77,6 @@ Description: Automated sneaker bot to get shoes from different sites. Supports a
 - Tips Form
  - User can see tips or any release information.
  - Tips are posted using backend server.
- 
 #
 **To-Do List:**
 

@@ -1,4 +1,6 @@
 ﻿'@author Yu Lin
+'https://github.com/yulin12345
+'admin@yulin12345.site
 'This form will add/save account information into the Main Form checkout datagridview.
 
 Public Class CheckoutAddForm
