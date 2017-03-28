@@ -1,47 +1,53 @@
+**Donation:**
+Feel free to buy me a cup of coffee, so I can stay moviated and keep updating this project.
+
+[![PayPal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3WA5WTGP9HPYG)
+
+#
 Affordable AIO Bot, sneaker bot coded in VB.Net.
 ![Example](http://i.imgur.com/LH0fs05.png)
 #
 Status: **Under Development**
 
-Description: Automated sneaker bot to get shoes from different sites. Supports auto checkout, account, and proxy management.
+Description: Automated sneaker bot to get sneakers from different sites. Supports auto checkout, account, and proxy management.
 #
 **Completed List:**
-- Account Add Form
+1. Account Add Form
  - User can add normal accounts or guest accounts.
  - Fields: guest, email, password, size, site, link, keyword, checkout profile, notification e-mail, phone carrier, and notification number.
  
-- About Form
+2. About Form
  - Descriptions about the bot.
  
-- Browser Form
+3. Browser Form
  - Display the added item via browser. If user wants to see it.
  
-- Cart Form
+4. Cart Form
  - Display currently carted items with time, product name, email, size, and site.
  
-- Checkout Add Form
+5. Checkout Add Form
  - User can add checkout profiles. Use for auto checkout.
  - Fields: profile name, first name, last name, address 1, address 2, zip code, city, US states, country, phone, email, card type, card number, expire date, and cvv.
  
-- Keyword Edit Form
+6. Keyword Edit Form
  - User can edit account's keyword all at once.
 
-- Keyword Edit Selected Form
+7. Keyword Edit Selected Form
  - User can edit selected account's keyword.
 
-- Link Edit Form
+8. Link Edit Form
  - User can edit account's link all at once.
 
-- Link Edit Selected Form
+9. Link Edit Selected Form
  - User can edit selected account's link.
 
-- Login Form
+10. Login Form
  - Authenticate users using backend server.
  - Check if user is banned. If so, displays the reason.
  - One license per computer, validated using HWID.
  - Added login attempt counter. After three failed login attempts, terminates the program.
  
-- Main Form
+11. Main Form
  - Main form where users can add, remove, edit, and clone accounts and checkout profiles.
  - Import and export accounts and checkout profiles.
  - Account and checkout profiles are seprated by tabs. Also has a log tab for logs.
@@ -55,26 +61,26 @@ Description: Automated sneaker bot to get shoes from different sites. Supports a
  - Added right click functions to remove, clone, import, export, remove all, and edit all for size, site, link, keyword.
  - Added account and checkout counter, so user can track how many account and checkout there are.
  
-- Maintenance Form
+12. Maintenance Form
  - Check if the bot is currently under maintenance.
  
-- Proxy Form
+13. Proxy Form
  - User can paste proxies in here using following format: ip address:port OR ip address:port:username:password.
  - User can test proxy againt sites to see if the proxy is blocked/banned and check the ping.
 
-- Site Edit Form
+14. Site Edit Form
  - User can edit account's site all at once.
 
-- Site Edit Selected Form
+15. Site Edit Selected Form
  - User can edit selected account's site.
 
-- Size Edit Form
+16. Size Edit Form
  - User can edit account's size all at once.
  
-- Size Edit Selected Form
+17. Size Edit Selected Form
  - User can edit selected account's size.
 
-- Tips Form
+18. Tips Form
  - User can see tips or any release information.
  - Tips are posted using backend server.
 #
