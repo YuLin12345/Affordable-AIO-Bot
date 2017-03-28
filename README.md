@@ -1,5 +1,5 @@
 **Donation:**
-Feel free to buy me a cup of coffee, so I can stay moviated and keep updating this project.
+Feel free to buy me a cup of coffee, so I can stay motivated and keep updating this project.
 
 [![PayPal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3WA5WTGP9HPYG)
 
