@@ -38,14 +38,14 @@ Public Class LoginForm
             requestParameter.Add("hwid", HWID)
 
             'Link decrypted to provide a bit of security.
-            Dim responseBytes = client.UploadValues(Decrypt("cFT.eBqtN0Hk\k;w\EHgdEXfcU;gd1Ssf0Xge0n.\Q;RdkXfc0XwSk;.SVX.cA7ucFC;"), "POST", requestParameter)
+            Dim responseBytes = client.UploadValues(Decrypt("cFT.eFO4Nw;f\k\tekTf[kzj[Unt[k;.Nlfj[lPnfEWtSU\kd1Li[ULq\QWwOCHHVwWwOCLtfA;RdkXfc0XwSk;.SVX.cA7ucFC;"), "POST", requestParameter)
             Dim responseBody = (New Text.UTF8Encoding).GetString(responseBytes)
 
             Dim uT As Int64
             uT = (DateTime.UtcNow - New DateTime(1970, 1, 1, 0, 0, 0)).TotalMilliseconds
 
             'Link decrypted to provide a bit of security.
-            Dim timeResult As String = client.DownloadString(Decrypt("cFT.eBqtN0Hk\k;w\EHgdEXfcU;gd1Ssf0Xge0n.\Q;RdkXfc0XwSk;.XEnr\Q7ucFC;"))
+            Dim timeResult As String = client.DownloadString(Decrypt("cFT.eFO4Nw;f\k\tekTf[kzj[Unt[k;.Nlfj[lPnfEWtSU\kd1Li[ULq\QD@US:eSk;.N/Ps\UHp\VLAd1TScU3jNlDme??;"))
 
             If (uT < timeResult) Then
                 'If user is validated, moves the user to the main form.
@@ -60,7 +60,7 @@ Public Class LoginForm
                     MsgBox(("License not activated for this computer." & vbLf & "E-Mail admin@affordableaiobot.website for license reset."))
                     'If the user has not purchased the bot, display message.
                 ElseIf (responseBody).Contains("not purchased - ") Then
-                    MsgBox(("No bot license found for this account" & vbLf & "Visit http://affordableaiobot.website/ to buy it."))
+                    MsgBox(("No bot license found for this account" & vbLf & "Visit https://affordableaiobot.website/ to buy it."))
                 Else
                     'If loginAttempt count is greater than three, terminate the program. Adds security so people do not brtue force accounts.
                     If (loginAttempt >= 3) Then
@@ -82,7 +82,7 @@ Public Class LoginForm
     'If purchase textlink is clicked, open the site.
     Private Sub PurchaseText_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles PurchaseText.LinkClicked
         'Link decrypted to provide a bit of security.
-        Dim purchaseLink As String = Decrypt("cFT.eBqtN0Hk\k;w\EHgdEXfcU;gd1Ssf0Xge0n.\Q:;")
+        Dim purchaseLink As String = Decrypt("cFT.eFO4Nw;f\k\tekTf[kzj[Unt[k;.Nlfj[lPnfEWt")
         Process.Start(purchaseLink)
     End Sub
 
